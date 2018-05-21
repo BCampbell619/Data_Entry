@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Routing &ndash; Open Route | Big 5 Documentation</title>
+<link href="waver.css" rel="stylesheet" type="text/css">
+<script src="JS/functions.js"></script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<nav class="mainNav">
+
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li class="dropdown"><button>WAVING</button>
+
+			<div class="drop-content">
+
+			<a href="#" onmouseover="openRoute('sub-route', 'sub-wave', 'sub-task')">Routing</a>
+			<div id="sub-route">
+			<a href="open_route.html">Open Routes</a>
+			<a href="close_route.html">Close Routes</a>
+			<a href="create_route.html">Create Routes</a>
+			</div>
+
+			<a href="#" onmouseover="openWave('sub-wave', 'sub-route', 'sub-task')">Waving</a>
+			<div id="sub-wave">
+			<a href="build_waves.html">Build Waves</a>
+			<a href="wavesheet.html">Wave Sheet</a>
+			<a href="#">Shortages</a>
+			<a href="#">Forceloads</a>
+			<a href="invoice.html">Invoicing</a>
+			<a href="reports.html">WM Reports</a>
+			</div>
+
+			<a href="#" onmouseover="openTask('sub-task', 'sub-wave')">Tasking</a>
+			<div id="sub-task">
+			<a href="task_release.html">Releasing Tasks</a>
+			<a href="build_tasks.html">Build Tasks</a>
+			<a href="wave_replen.html">Wave Replen Rpt</a>
+			</div>
+
+			</div>
+
+			</li>
+
+			<li class="dropdown" onmouseover="resetSub('sub-route', 'sub-wave', 'sub-task')"><button>PUT AWAY</button>
+
+			<div class="drop-content"><a href="a2a.html">Active to Active</a></div></li>
+
+			<li class="dropdown"><button>APPOINTMENTS</button>
+
+			<div class="drop-content"></div></li>
+
+		</ul>
+	
+	</nav><!-- end of mainNav class -->
+
+	<section id="hero">
+
+		<h1>Routing</h1>
+
+	</section><!-- end of hero id -->
+
+	<section id="showMe">
+
+		<div class="head">
+
+			<h1>How to Open a Route</h1>
+
+		</div><!-- end of head class (showMe) -->
+
+		<div class="body">
+
+			<p class="focus"><strong>FOCUS&#58;</strong>This guide will take you step by step 
+			through the process of attaching a route to a shipping dock door&#46;</p>
+
+			<div class="example" id="Ex_1" onmouseover="hoverIn('Ex_1')" onmouseout="hoverOut('Ex_1')">
+
+				<p>Select the menu option titled &lsquo;Work With Routes &ndash; rtl&rsquo; and this
+				 &lsquo;From&rsquo; and &lsquo;To&rsquo; screen will appear&#58;</p><br>
+				<img src="images/routing/rt_Frm&To.png" alt="From and To Fields of Route Menu" class="photo-sizing">
+
+			</div><!-- end of example class -->
+
+			<p>When the &lsquo;From&rsquo; and &lsquo;To&rsquo; screen is reached you will need to 
+			enter your route number&#46; The term &lsquo;Route&rsquo; is synonymous with &lsquo;Store&#44;&rsquo;
+			 which can be found on your <a href="wavesheet.html">wave sheet</a>&#46; 
+			You can enter the route number in just the &lsquo;From&rsquo; field&#44; 
+			or it can be placed in both the &lsquo;From&rsquo; and &lsquo;To&rsquo; 
+			fields&#46; After you have entered the route press &lsquo;Enter&rsquo;&#46;</p>
+
+
+			<div class="example" id="Ex_2" onmouseover="hoverIn('Ex_2')" onmouseout="hoverOut('Ex_2')">
+
+				<p>Once the desired route &#40;i&#46;e&#46; the store number&#41;
+				 is entered the next screen should display the route in an &lsquo;unassigned&rsquo; status
+				 as shown below&#58;</p><br>
+				<img src="images/routing/rt_Unassigned.png" alt="Display of unassigned route" class="photo-sizing">
+
+			</div><!-- end of example class -->
+
+			<p>The next step is to activate the route&#46; This is done by taking an option 
+			&lsquo;2&rsquo; in the cursor field to the left of the route number and pressing 
+			&lsquo;Enter&rsquo;&#46;</p>
+
+			<div class="example" id="Ex_3" onmouseover="hoverIn('Ex_3')" onmouseout="hoverOut('Ex_3')">
+
+				<p>The &lsquo;Activate Route&rsquo; option is the first option on this screen&#58;</p><br>
+				<img src="images/routing/rt_Activate.png" alt="Display of Activate option">
+
+			</div><!-- end of example class -->
+
+			<p>The next screen will have a few empty fields&#46; These are the fields used to assign a 
+			route to a dock door&#46;</p><br>
+
+			<p>There are two pieces of information that you need to concern yourself with&#44; are the 
+			following&#58;</p><br>
+
+			<ul>
+
+				<li>Dock&#47;Door</li>
+				<li>Trailer</li>
+
+			</ul><br>
+
+			<p>The first empty field of &lsquo;Dock&#47;Door&rsquo; will always need the same four 
+			letters &ndash; &lsquo;DOOR&rsquo;&#46;	The second empty field will change depending on the 
+			door that is being assigned to the route&#46; It can be from &lsquo;N102&rsquo; to 
+			&lsquo;N125&rsquo;&#46; This will depend mostly on what the Wave Sheet dictates&#46;</p><br>
+
+			<p>Trailer is fairly consistent as well&#46; The first empty field will always require 
+			&lsquo;BIG5&rsquo; and the second empty field always takes the route number&#46;</p><br>
+
+			<p>Once all the fields have been completed press &lsquo;Enter&rsquo; and then 
+			&lsquo;F16&rsquo;&#46;</p>
+
+			<div class="example" id="Ex_4" onmouseover="hoverIn('Ex_4')" onmouseout="hoverOut('Ex_4')">
+
+				<p>This is a depiction of a completed route activiation&#58;</p><br>
+				<img src="images/routing/rt_AssignDoor.png" alt="Display of fields required to assign a dock door to a route">
+
+			</div><!-- end of example class -->
+
+			<p>Once the route has been confirmed you should be taken back to the main route screen&#46;
+			 Press &lsquo;F5&rsquo; to refresh the screen and ensure the route shows a status of 
+			 &lsquo;Activated&rsquo;&#46;</p><br>
+
+			<p>Once this is acheived you have successfully activated a route&#46; Be sure to mark 
+			your <a href="wavesheet.html">wave sheet</a> of the changes made to the route&#44; 
+			and realize that the wave associated with the route is now eligible for 
+			<a href="task_release.html">release</a>&#46;</p>
+
+			<div class="example" id="Ex_5" onmouseover="hoverIn('Ex_5')" onmouseout="hoverOut('Ex_5')">
+
+				<p>This is a depiction of a completed route activiation&#58;</p><br>
+				<img src="images/routing/rt_Activated.png" alt="Display of activated route" class="photo-sizing">
+
+			</div><!-- end of example class -->
+
+
+		</div><!-- end of body class -->
+
+
+	</section><!-- end of showMe id -->
+
+	<section id="practice">
+
+		<h2>Practice</h2><br>
+
+		<p>Activate route 00209 to door N123 <small>&#40;Click on &lsquo;F5&ndash;Refresh&rsquo; or &lsquo;F16&ndash;
+		Confirm&rsquo; to refresh or confirm&#41;</small> &nbsp;&nbsp;&nbsp;&nbsp;<span id="error"></span></p>
+
+		<div id="route-practice">
+
+			<form action="open_route.html#practice" name="rt_Practice" method="post" onsubmit="activateRoute.activate('route-practice', 'error')">
+
+				<table>
+
+				<thead>
+
+					<th colspan="2">2 = Activate Route</th>
+
+				</thead>
+
+				<tbody>
+
+				<tr>
+
+				<td class="act-option">Opt</td>
+				<td class="act-option">Route</td>
+				<td class="act-option">Type</td>
+				<td class="act-option">Status</td>
+				<td class="act-option">Dock</td>
+				<td style="color: rgb(255,255,255); font-size: 24px; padding-left: 0px;">Door</td>
+				<td style="color: rgb(255,255,255); font-size: 24px; padding-left: 0px;">Trailer</td>
+
+				</tr>
+
+				<tr>
+
+				<td><input type="text" name="option" id="option"></td>
+				<td><label for="option">00209</label></td>
+				<td><label>Continuous</label></td>
+				<td><label>Unassigned</label></td>
+				<td><label></label></td>
+				<td><label></label></td>
+				<td><label></label></td>
+
+				</tr>
+
+				<tr>
+
+				<td><a class="practice-submit" onclick="window.location.reload()">F5&ndash;Refresh</a></td>
+				<td><a class="practice-submit" onclick="activateRoute.activate('route-practice', 'error')">F16&ndash;Confirm</a></td>
+
+				</tr>
+
+				</tbody>
+
+				</table>
+
+			</form>
+
+		</div>
+
+	</section>
+
+	<footer id="Footer">
+
+		<div class="footer">
+
+			<p>&copy;2017 Big 5 Sporting Goods</p>
+
+		</div>
+
+		
+
+	</footer><!-- end of footer section -->
+
+</div><!-- end of wrapper class -->
+<script src="JS/routes.js"></script>
+</body>
+
+</html>

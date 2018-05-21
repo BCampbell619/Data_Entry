@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports &ndash; Native WM Reports | Big 5 Documentation</title>
+<link href="waver.css" rel="stylesheet" type="text/css">
+<script src="JS/functions.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<nav class="mainNav">
+
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li class="dropdown"><button>WAVING</button>
+
+			<div class="drop-content">
+
+			<a href="#" onmouseover="openRoute('sub-route', 'sub-wave', 'sub-task')">Routing</a>
+			<div id="sub-route">
+			<a href="open_route.html">Open Routes</a>
+			<a href="close_route.html">Close Routes</a>
+			<a href="create_route.html">Create Routes</a>
+			</div>
+
+			<a href="#" onmouseover="openWave('sub-wave', 'sub-route', 'sub-task')">Waving</a>
+			<div id="sub-wave">
+			<a href="build_waves.html">Build Waves</a>
+			<a href="wavesheet.html">Wave Sheet</a>
+			<a href="#">Shortages</a>
+			<a href="#">Forceloads</a>
+			<a href="invoice.html">Invoicing</a>
+			<a href="reports.html">WM Reports</a>
+			</div>
+
+			<a href="#" onmouseover="openTask('sub-task', 'sub-wave')">Tasking</a>
+			<div id="sub-task">
+			<a href="task_release.html">Releasing Tasks</a>
+			<a href="build_tasks.html">Build Tasks</a>
+			<a href="wave_replen.html">Wave Replen Rpt</a>
+			</div>
+
+			</div>
+
+			</li>
+
+			<li class="dropdown" onmouseover="resetSub('sub-route', 'sub-wave', 'sub-task')"><button>PUT AWAY</button>
+
+			<div class="drop-content"><a href="a2a.html">Active to Active</a></div></li>
+
+			<li class="dropdown"><button>APPOINTMENTS</button>
+
+			<div class="drop-content"></div></li>
+
+		</ul>
+	
+	</nav><!-- end of mainNav class -->
+
+	<section id="hero">
+
+		<h1>Waving</h1>
+
+	</section><!-- end of hero id -->
+
+	<section id="contentList">
+
+		<h2>CONTENTS&#58;</h2>
+
+		<ol type="1">
+
+			<li><a href="#manifest">Carton Manifest Report</a></li>
+			<li><a href="#pre">Pre Wave Cube Report</a></li>
+			<li><a href="#post">Post Wave Cube Report</a></li>
+			<li><a href="#cnl">Cartons Not Loaded Report</a></li>
+			<li><a href="#cnlt">Cartons Not Lodaed by Time Report</a></li>
+			<li><a href="#bol">Bill of Lading Report</a></li>
+			<li><a href="#sn">Serial Number Tracking Report</a></li>
+
+		</ol><!-- end of content list orderd list -->
+
+	</section><!-- end of content list -->
+
+	<section id="showMe">
+
+		<div class="head">
+
+			<h1>WM Reports</h1>
+
+		</div><!-- end of head class (showMe) -->
+
+		<div class="body">
+
+			<p class="focus"><strong>FOCUS&#58;</strong>The following guides will demonstrate how to use
+			each of the native WM reports available to the waver &#40meaning reports printed or used 
+			outside of Datalink&#41;&#46;</p><!-- end of focus class -->
+
+			<div class="example">
+
+				<img src="images/reporting/rpt_CtnManiMenu.png" alt="Report Menus" class="photo-sizing">
+				<img src="images/reporting/rpt_ReportMenus.png" alt="Report Menus" class="photo-sizing">
+
+			</div><!-- end of example class -->
+
+			<p>Occasionally&#44; and in some cases every day&#44; you will need to print or re&ndash;print
+			 a report for yourself or for someone else&#46; The following sections will go through 
+			each of these reports and outline the data required to run the reports successfully&#46;</p>
+
+		</div><!-- end of body class (showMe) -->
+
+		<div class="head" id="manifest">
+
+			<h1>Carton Manifest Report</h1>
+
+		</div><!-- end of carton manifest header -->
+
+		<div class="body">
+
+			<div class="example">
+
+				<p>In the Wave&#47;Route menu under the &#42;&#42; Reporting &#42;&#42; header 
+				you will find as option 9 the &lsquo;Print Carton Manifest&rsquo; menu&#58;</p><br>
+				<img src="images/reporting/rpt_CtnManiMenu.png" alt="Carton Manifest Menu" class="photo-sizing">
+
+			</div><!-- end of CtnManiMenu example class -->
+
+			<div class="example">
+
+				<p>These are all the fields for the Carton Manifest Report&#58;</p><br>
+				<img src="images/reporting/rpt_CtnManiFields.png" alt="Report Fields for Carton Manifest" class="photo-sizing">
+
+			</div><!-- end of CtnManiFields example class -->
+
+			<p>The Carton Manifest Report is broken up into two parts&#58; the top and the bottom&#46;</p><br>
+
+			<div class="subhead">
+
+				<h2>The Top</h2><br>
+
+				<p>The top section provides you two options &ndash; Store and Wave Number&#44; or a global 
+				selection by Wave Date&#46; This will depend on what you need&#46; Most of the time you 
+				will be printing a single store's manifest &#40The Store and Wave Number combination&#41;
+				&#46;</p>
+
+			</div><!-- end of CtnManiTop sub head -->
+
+			<p class="note">NOTE&#58; When using the single store print you must clear the Wave Date field 
+			or it will override your single store selection when attempting to print the report&#46;</p>
+
+			<div class="example">
+
+				<img src="images/reporting/rpt_CtnManiTop.png" alt="Top Half of Ctn Manifest Fields" class="photo-sizing">
+
+			</div><!-- end of CtnManiTop example class -->
+
+			<div class="subhead">
+
+				<h2>The Bottom</h2><br>
+
+				<p>The bottom section is pretty straight forward&#46; You&#39;re either selecting a summarized 
+				or detailed report&#46; The default of summary &lsquo;Y&rsquo; and detail &lsquo;N&rsquo; 
+				is what you want 99&#37; of the time&#46; The only time you&#39;ll need to print a detailed 
+				report is when a logical store &#40;816&#44; 819&#44; 820&#44; or 851&#41; is being 
+				checked&#44; or if you are being asked to of course&#46; The printer device will depend on 
+				where you want to send the report&#46;</p>
+
+				<p class="note">NOTE&#58; If security is calling for paperwork for a particular wave you will 
+				want to send it to DCMFP8. Usually you will print the Carton Manifest&#44; BOL&#44; &amp; 
+				the Serial Number Manifest for security when they are asking for paperwork&#46;</p>
+
+			</div><!-- end of CtnManiBottom sub head -->
+
+			<div class="example">
+
+				<img src="images/reporting/rpt_CtnManiBottom.png" alt="Bottom Half of Ctn Manifest Fields" class="photo-sizing">
+
+			</div><!-- end of CtnManiBottom example class -->
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+		</div><!-- end of body for carton manifest -->
+
+		<div class="head" id="pre">
+
+			<h1>Pre Wave Cube Report</h1>
+
+		</div><!-- end of Pre Wave header -->
+
+		<div class="body">
+
+			<div class="example">
+
+				<p>In the Wave&#47;Route menu the &lsquo;Print Pre Wave Cube Report&rsquo; is menu 
+				option 10&#58;</p><br>
+				<img src="images/reporting/rpt_PreWvMenu.png" alt="Bottom Half of Ctn Manifest Fields" class="photo-sizing">
+
+			</div><!-- end of rpt_PreWvMenu example class -->
+
+			<p>After selecting the Pre Wave Cube Report you will find a few input fields&#46;</p>
+
+			<div class="example">
+
+				<p>The input field options for the Pre Wave Cube Report&#58;</p><br>
+				<img src="images/reporting/rpt_PreWvFields.png" alt="Bottom Half of Ctn Manifest Fields" class="photo-sizing">
+
+			</div><!-- end of rpt_PreWvFields example class -->
+
+			<div class="subhead">
+
+				<h2>Day</h2><br>
+
+				<p>Day refers to the day of the week and is represented by an integer &#40i&#46;e&#46; 
+				1 &#61; Monday&#44; 2 &#61; Tuesday&#44; etc&#46;&#41;&#46;</p><br>
+
+				<h2>Shift</h2><br>
+
+				<p>Shift refers to the type of schedule you are running&#44; such as a regular 
+				schedule or a holdiay schedule&#46; A regular schedule is input as &lsquo;R1&rsquo; 
+				and a holiday schedule as &lsquo;H1&#46;&rsquo; There are two other types of schedules 
+				that apply to Tuesday and Thursday only&#46; These are an A and a B schedule&#46; 
+				These are input as &lsquo;RA&rsquo; or &lsquo;RB&rsquo; depending on the week&#46; 
+				So&#44; for example&#44; if you are running a regular Tuesday schedule you would 
+				input &lsquo;2&rsquo; for the Day and &lsquo;RA&rsquo; for the Shift for the A 
+				week and &lsquo;RB&rsquo; for the B week&#46;</p><br>
+
+				<p>Monday&#44; Wednesday&#44; and Friday&#39's are &lsquo;R1&rsquo; &amp; 
+				&lsquo;H1&rsquo; schedules&#46;</p><br>
+
+				<p>Tuesday and Thursday&#39;s are &lsquo;RA&#44;&rsquo; &lsquo;RB&rsquo; &amp; 
+				&lsquo;H1&rsquo; schedules&#46;</p><br>
+
+				<h2>Hub Stores Only</h2><br>
+
+				<p>Hub Stores Only is a filter option&#46; When left to &lsquo;N&rsquo; the report 
+				will print all stores including the Hub stores&#46; If it is flipped to &lsquo;Y&rsquo; 
+				then the report will only print the Hub stores on that particular schedule&#46;</p><br>
+
+				<h2>Stores</h2><br>
+
+				<p>Stores is another filter option&#46; This will print only a selected store for 
+				a particular schedule&#46; The printer device to use is whatever printer you are 
+				near&#46;</p><br>
+
+			</div><!-- end of PreWvFields sub head class -->
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+		</div><!-- end of Pre Wave body class -->
+
+		<div class="head" id="post">
+
+			<h1>Post Wave Cube Report</h1>
+
+		</div><!-- end of Post Wave head class -->
+
+		<div class="body">
+
+			<div class="example">
+
+				<p>In the Wave&#47;Route menu the &lsquo;Print Post Wave Cube Report&rsquo; is menu 
+				option 11&#58;</p><br>
+				<img src="images/reporting/rpt_PostWvMenu.png" alt="Post Wave Menu" class="photo-sizing">
+
+			</div><!-- end of PostWvMenu example class -->
+
+			<p>The Post Wave Cube report would be run after all the waves for a schedule have been 
+			built&#46; The fields vary slightly from what the Pre Wave Cube report has&#46;</p>
+
+			<div class="example">
+
+				<p>The input field options for the Post Wave Cube Report&#58;</p><br>
+				<img src="images/reporting/rpt_PostWvFields.png" alt="Post Wave Menu" class="photo-sizing">
+
+			</div><!-- end of PostWvMenu example class -->
+
+			<div class="subhead">
+
+				<h2>Wave Date</h2><br>
+
+				<p>The Wave Date field simply requires the date the schedule was built on&#46; 
+				The format is given to the right of the field&#46;</p><br>
+
+				<h2>Store</h2><br>
+
+				<p>Store is a filter field&#46; If you only want to look at one store then you would 
+				type in the number after entering the Wave Date&#46;</p><br>
+
+				<h2>Hub Store Only</h2><br>
+
+				<p>Hub Store Only is another filter field and works the same way the Pre Wave Cube 
+				Report does. Selecting &lsquo;Y&rsquo; will return only Hub stores and leaving the 
+				default &lsquo;N&rsquo; will return all the stores on the schedule&#46;</p><br>
+
+			</div><!-- end of PostWvFields sub head class -->
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+		</div><!-- end of Post Wave body class -->
+
+		<div class="head" id="cnl">
+
+			<h1>Cartons Not Loaded Report</h1>
+
+		</div><!-- end of head class for cartons not loaded -->
+
+		<div class="body">
+
+			<div class="example">
+
+				<p>In the Wave&#47;Route menu the &lsquo;Cartons Not Loaded Report&rsquo; is menu 
+				option 12&#58;</p><br>
+				<img src="images/reporting/rpt_CtnNotLdMenu.png" alt="Cartons Not Loaded Menu" class="photo-sizing">
+
+			</div><!-- end of CtnNotLdMenu example class -->
+
+			<div class="example">
+
+				<p>The input field options for the Cartons Not Loaded Report&#58;</p><br>
+				<img src="images/reporting/rpt_CtnNotLdFields.png" alt="Cartons Not Loaded Menu" class="photo-sizing">
+
+			</div><!-- end of CtnNotLdFields example class -->
+
+			<div class="subhead">
+
+				<h2>From Wave &amp; To Wave</h2><br>
+
+				<p>The &lsquo;From Wave&rsquo; field allows you to select a starting point for the 
+				range of waves you want to print&#46; Remember&#44; wave numbers are in the format 
+				of &lsquo;YYYYMMDDNNN&rsquo; &ndash; year&#44; month&#44; day&#44; and the wave 
+				number&#46;</p><br>
+
+				<p>The &lsquo;To Wave&rsquo; field allows you to select the end point of your wave 
+				range for the report&#46; For most of the time you will be looking at one wave 
+				when printing this report&#46; Your &lsquo;From&rsquo; and &lsquo;To&rsquo; will 
+				usually be the same&#46;</p><br>
+
+				<h2>From Status &amp; To Status</h2><br>
+
+				<p> The &lsquo;From Status&rsquo; &amp &lsquo;To Status&rsquo; act just like the 
+				other fields &ndash; they provide a start and end to your status range&#46; The 
+				default of status &lsquo;10&rsquo; to status &lsquo;20&rsquo; will be sufficient 
+				for the purpose of printing this report&#46;</p><br>
+
+				<p>These status&#39; will give you any unloaded cartons for the wave&#40;s&#41; 
+				you are trying to print&#46; If you are looking for anything other than unloaded 
+				cartons you will need to adjust your status range&#46; &#40;i&#46;e&#46; Cartons 
+				currently being packed &ndash; status &lsquo;05&#44;&rsquo; Loaded cartons 
+				status &lsquo;60&#46;&rsquo;&#41;</p><br>
+
+			</div><!-- end of CtnNotLdFields sub head class -->
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+		</div><!-- end of cartons not loaded body class -->
+
+		<div class="head" id="cnlt">
+
+			<h1>Cartons Not Loaded by Time Report</h1>
+
+		</div><!-- end of head class for cartons not loaded by time -->
+
+		<div class="body">
+
+			<div class="example">
+
+				<p>In the Wave&#47;Route menu the &lsquo;Cartons Not Loaded By Time Rpt&rsquo; is menu 
+				option 13&#58;</p><br>
+				<img src="images/reporting/rpt_CtnNotLdTimeMenu.png" alt="Cartons Not Loaded by Time Menu" class="photo-sizing">
+
+			</div><!-- end of CtnNotLdTimeMenu example class -->
+
+			<div class="example">
+
+				<p>The input field options for the Cartons Not Loaded By Time Report&#58;</p><br>
+				<img src="images/reporting/rpt_CtnNotLdTimeFields.png" alt="Cartons Not Loaded by Time Menu" class="photo-sizing">
+
+			</div><!-- end of CtnNotLdTimeFields example class -->
+
+			<div class="subhead">
+
+				<h2>Number of Minutes</h2><br>
+
+				<p>The &lsquo;Number of Minutes&rsquo; field allows you to select a time frame of 
+				30 minute range increments&#46; This will give you any cartons that have not been 
+				loaded within these time frames&#46;</p><br>
+
+				<div class="note">
+
+				<p>This report does not allow you to be as specific as the 
+				&lsquo;Cartons Not Loaded&rsquo; report&#46; If you are printing for force load 
+				reasons&#44; it is recommended to use the &lsquo;Cartons Not Loaded&rsquo; report 
+				instead of this &lsquo;By Time&rsquo; report&#46;</p>
+
+				</div><br><!-- end of notice class -->
+
+				<h2>From Status &amp; To Status</h2><br>
+
+				<p> The &lsquo;From Status&rsquo; &amp &lsquo;To Status&rsquo; act just like the 
+				other fields in the &lsquo;Cartons Not Loaded&rsquo; report &ndash; they provide 
+				a start and end to your status range&#46; The default of status &lsquo;05&rsquo; 
+				to status &lsquo;20&rsquo; will be sufficient for the purpose of printing this 
+				report&#46;</p><br>
+
+			</div><!-- end of CtnNotLdTimeFields sub head class -->
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+		</div><!-- end of cartons not loaded by time body class -->
+
+		<div class="head" id="bol">
+
+			<h1>Bill Of Lading Report</h1>
+
+		</div><!-- end of head class for bill of lading -->
+
+		<div class="body">
+
+			<div class="example">
+
+				<p>In the Wave&#47;Route menu the &lsquo;Print Bill of Lading&rsquo; is menu 
+				option 14&#58;</p><br>
+				<img src="images/reporting/rpt_BOLMenu.png" alt="Print Bill Of Lading Menu" class="photo-sizing">
+
+			</div><!-- end of BOLMenu example class -->
+
+			<div class="example">
+
+				<p>To print a BOL you must provide a load number&#58;</p><br>
+				<img src="images/reporting/rpt_BOL_LdNbr.png" alt="Bill Of Lading Load Number" class="photo-sizing">
+
+			</div><!-- end of BOL_LdNbr example class -->
+
+			<div class="example">
+
+				<p>Once the load number is provided a simple confirm send the report&#58;</p><br>
+				<img src="images/reporting/rpt_BOLConfirm.png" alt="BOL Confirm Screen" class="photo-sizing">
+
+			</div><!-- end of CtnNotLdTimeFields example class -->
+
+			<div class="subhead">
+
+				<h2>Load Number</h2><br>
+
+				<p>The &lsquo;Load Number&rsquo; is not so readily discoverable unless you know 
+				where to look&#46; The Load Number can be found in your 
+				&lsquo;Work With Waves&rsquo; menu&#46; On any wave that is currently 
+				picking&#47;loading you can use option &lsquo;9&rsquo; to view the Load Number of 
+				that wave&#46;</p><br>
+
+			<div class="example">
+
+				<p>Option &lsquo;9&rsquo; will display the load number for a wave&#58;</p><br>
+				<img src="images/reporting/rpt_Option_9.png" alt="Option 9 for Load Number" class="photo-sizing">
+
+			</div><!-- end of Print BOL example class -->
+
+
+				<p>If you'll notice that when you are in this menu option you have the option to 
+				print the BOL&#58;</p><br>
+
+			<div class="example">
+
+				<p>Option &lsquo;9&rsquo; will print the BOL from within the wave&#58;</p><br>
+				<img src="images/reporting/rpt_PrintBOL.png" alt="Print BOL From Wave" class="photo-sizing">
+
+			</div><!-- end of Print BOL example class -->
+
+				<p>Once this option is taken against the load number you will see the same confirm 
+				screen as shown previously&#46; A simple confirm is needed to print the BOL and 
+				your work is done&#46; You&#39;re probably now wondering why the 
+				&lsquo;Print Bill Of Lading&rsquo; option even exists since you can print the 
+				report straight from the wave&#44; right&#63; We wonder the same thing&#46;</p><br>
+
+			</div><!-- end of BOL_LdNbr sub head class -->
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+		</div><!-- end of Print BOL body class -->
+
+		<div class="head" id="sn">
+
+			<h1>Serial Number Tracking Report</h1>
+
+		</div><!-- end of head class for serial number tracking -->
+
+		<div class="body">
+
+			<div class="example">
+
+				<p>In the Wave&#47;Route menu the &lsquo;Serial No. Tracking Report&rsquo; is menu 
+				option 15&#58;</p><br>
+				<img src="images/reporting/rpt_SNMenu.png" alt="Serial Number Tracking Menu" class="photo-sizing">
+
+			</div><!-- end of SNMenu example class -->
+
+			<div class="example">
+
+				<p>The input field options for the Serial Number Tracking Report&#58;</p><br>
+				<img src="images/reporting/rpt_SNFields.png" alt="Serial Number Tracking Fields" class="photo-sizing">
+
+			</div><!-- end of SNFields example class -->
+
+			<div class="subhead">
+
+				<h2>Store</h2><br>
+
+				<p>The &lsquo;Store&rsquo; field allows you to select a single store for which you 
+				need to print the serial number manifest&#46;</p><br>
+
+				<h2>Wave Number</h2><br>
+
+				<p> The &lsquo;Wave Number&rsquo; field requires the wave number of the store being 
+				printed&#46;</p><br>
+
+				<div class="note">
+
+					<p><strong>Note&#58;</strong> If this report is printed&#44; or requested 
+					before the wave is invoiced the report may print blank&#46; This may cause 
+					a false report that the wave or store does not have any firearms&#46;</p>
+
+				</div><br><!-- end of notice class -->
+
+			</div><!-- end of SNFields sub head class -->
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+		</div><!-- end of serial number tracking body class -->
+
+	</section><!-- end of showMe id section -->
+
+	<footer id="Footer">
+
+		<div class="footer">
+
+			<p>&copy;2017 Big 5 Sporting Goods</p>
+
+		</div>
+
+		
+
+	</footer><!-- end of footer section -->
+
+</div><!-- end of wrapper class -->
+
+</body>
+
+</html>

@@ -1,0 +1,482 @@
+/*
+
+colors:	#EEEE77 - Yellow (Hero background)
+	#FFFACD - Lemonchiffon (Focus class background)
+	#FFF68F - Khaki (Focus class border)
+	#FFFFE0 - Light Yellow
+	#F0F8FF - Light Blue
+	#AD0606 - Red
+	#FFC1C1 - Light Red
+
+
+
+a2a_img: a2a_RFMenu		H:200px W:695px
+	 a2a_VAIMenu		H:230px w:725px
+	 a2a_PCfAMenu		H:300px W:500px
+	 a2a_CaseLabel		H:160px W:490px
+	 a2a_CaseSKU		H:230px W:490px
+	 a2a_CaseQTY		H:280px W:530px
+	 a2a_CasePrintMenu	H:200px W:740px
+	 a2a_CasePrint		H:210px W:790px
+	 a2a_VAISKU		H:250px W:820px
+	 a2a_VAISKUDetail	H:160px W:850px
+	 a2a_VAIRelocate	H:160px W:800px
+	 a2a_VAIRelocateLoc	H:380px W:800px
+	 a2a_RelocateField	H:395px W:800px
+	 a2a_Warn1		H:280px W:800px
+	 a2a_Warn2		H:300px W:810px
+	 a2a_ConfrimScreen	H:410px W:800px
+	 a2a_FinalView		H:160px W:800px
+	 a2a_SpreadSheet	H:376px W:735px
+
+Section 1.0 - Base Styles
+Section 2.0 - Navigation Styles
+Section 3.0 - Menu Styles
+Section 3.1 - JS Function Styles
+Section 4.0 - 
+
+
+*/
+
+
+
+/*==============================================================================================================
+						1.0 Base Styles
+================================================================================================================*/
+
+*{
+	margin: 0;
+}
+body {
+	background-color: #eee;
+	font-family: sans-serif;
+}
+
+.wrapper {
+	background-color: #FFF;
+	margin: auto;
+	max-width: 1400px;
+	min-width: 970px;
+	width: 1400px;
+}
+
+
+/*==============================================================================================================*/
+
+
+
+/*==============================================================================================================
+					     2.0 Navigation Styles
+================================================================================================================*/
+
+.mainNav {
+	background-color: #000;
+	color: #FFF;
+	position: fixed;
+	width: 1400px;
+	min-width: 970px;
+	max-width: 1400px;
+}
+
+.mainNav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mainNav li {
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+
+.mainNav a {
+	color: #FFF;
+	display: block;
+	font-weight: 300;
+	margin: 0px 5px 0 0;
+	padding: 12px;
+	text-decoration: none;
+}
+
+
+.mainNav a:hover, .mainNav button:hover {
+	color: #FAFAFA;
+}
+
+.mainNav li button {
+	background-color: #000;
+	border: none;
+	color: #FFF;
+	display: block;
+	font-size: 16px;
+	font-weight: 300;
+	margin: 0 5px 0 0;
+	padding: 12px;
+	width: 175px;
+	text-decoration: none;
+}
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+}
+
+.drop-content {
+	background-color: #FAFAFA;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	display: none;
+	margin: 0px;
+	position: absolute;
+	width: 175px;
+	z-index: 1;
+}
+
+.drop-content a {
+	background-color: #FAFAFA;
+	color: #000;
+	display: inline-block;
+	padding: 8px 0 8px 5px;
+	width: 175px;
+	text-decoration: none; 
+}
+
+.drop-content a:hover {
+	background-color: #EEE;
+	color: #000;
+}
+
+.dropdown:hover .drop-content {
+	display: block;
+}
+
+#sub-route {
+	background-color: #FAFAFA;
+	color: #000;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+		top: 0px;
+		left: 103%;
+	width: 195px;
+	z-index: 1;
+}
+
+#sub-route a {
+	background-color: #eee;
+	color: #000;
+	display: inline-block;
+	padding: 8px 0 8px 20px;
+	width: 175px;
+	text-decoration: none;
+}
+
+#sub-route a:hover {
+	background-color: #A0A0A0;
+	color: #FFF;
+}
+
+#sub-wave {
+	background-color: #FAFAFA;
+	color: #000;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+		top: 34px;
+		left: 103%;
+	width: 195px;
+	z-index: 1;
+}
+
+#sub-wave a {
+	background-color: #eee;
+	color: #000;
+	display: inline-block;
+	padding: 8px 0 8px 20px;
+	width: 175px;
+	text-decoration: none;
+}
+
+#sub-wave a:hover {
+	background-color: #A0A0A0;
+	color: #FFF;
+}
+
+#sub-task {
+	background-color: #FAFAFA;
+	color: #000;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+		top: 68px;
+		left: 103%;
+	width: 195px;
+	z-index: 1;
+}
+
+#sub-task a {
+	background-color: #eee;
+	color: #000;
+	display: inline-block;
+	padding: 8px 0 8px 20px;
+	width: 175px;
+	text-decoration: none;
+}
+
+#sub-task a:hover {
+	background-color: #A0A0A0;
+	color: #FFF;
+}
+
+/*==============================================================================================================*/
+
+
+
+/*==============================================================================================================
+					     3.0 Navigation Styles
+================================================================================================================*/
+
+
+#hero {
+	background: #FFFFE0;
+	color: #222;
+	font-family: sans-serif;
+	font-weight: 300;
+	padding-top: 50px;
+	text-align: center;
+	width: 100%;
+}
+
+#hero h1 {
+	font-size: 72px;
+	font-weight: 300;
+	padding: 20px 0;
+}
+
+#hero p {
+	font-size: 24px;
+	padding: 10px 0 20px;
+}
+
+/*==============================================================================================================*/
+
+
+
+/*==============================================================================================================
+					     3.1 Menu Section Styles
+================================================================================================================*/
+
+.head {
+	background-color: #FAFAFA;
+	margin-top: 10px;
+	padding: 20px 0;
+	width: 100%;
+	text-align: center;
+}
+
+.head h1 {
+	font-size: 96px;
+	font-weight: 300;
+}
+
+.body {
+	padding: 10px;
+}
+
+.body h2 {
+	font-size: 48px;
+	font-weight: 400;
+}
+
+.body h4 {
+	border-bottom: solid 2px #FFF68F;
+	font-size: 36px;
+	font-weight: 300;
+	margin: 10px 0;
+}
+
+.body p {
+	font-size: 24px;
+}
+
+
+.focus {
+	background-color: #FFFACD;
+	border: solid 2px #FFF68F;
+	font-size: 24px;
+	margin: 30px 0 40px;
+	padding: 5px;
+}
+
+.policy {
+	border: solid 2px #EE9A00;
+	background-color: #FFEC8B;
+	font-size: 24px;
+	margin: auto;
+	margin-bottom: 40px;
+	padding: 5px;
+	width: 1000px;
+}
+
+.policy ul {
+	margin: 0; 
+	padding: 0 0 10px;
+}
+
+.policy li {
+	margin-left: 80px;
+	padding: 10px 0 0;
+}
+
+.subBody {
+	border-left: solid 5px #FAFAFA;
+	padding: 20px;
+}
+
+.subBody h4 {
+	background: linear-gradient(90deg, #FFF, #FFEC8B);
+}
+
+#actList {
+	list-style: none;
+	margin: 0 0 0 60px;
+	padding: 0;
+}
+
+#actList li {
+	font-size: 24px;
+	margin: 0;
+	padding: 8px 0;
+	width: 120px;
+}
+
+#actList li:hover {
+	font-weight: bold;
+}
+
+#sku p, #desc p, #from p, #qty p, #to p, #pick p {
+	padding-top: 10px;
+}
+
+.photo {
+	margin: 20px auto;
+	width: 850px;
+}
+
+#fileLink {
+	color: #EE9A00;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+#fileLink:hover {
+	color: #FFEC8B;
+}
+
+#innerList {
+	margin-left: 40px;
+}
+
+.note {
+	background: #FFC1C1;
+	border: solid 2px #AD0606;
+	margin: 15px 60px;
+	padding: 5px;
+}
+
+#cs_date {
+	color: #1C86EE;
+}
+
+#cs_sku {
+	color: green;
+}
+
+#lblCreate img {
+	box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.2);
+	margin: 20px 0;
+}
+
+#lblCreate p {
+	width: 60%;
+}
+
+
+/*==============================================================================================================*/
+
+
+
+
+/*==============================================================================================================
+					      3.1 JS Function Styles
+================================================================================================================*/
+
+#sku, #desc, #from, #qty, #to, #pick {
+	display: block;
+	height: 0px;
+	overflow: hidden;
+	width: 800px;
+	transition: none;
+}
+
+#overview {
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+	transition: none;
+}
+
+#findInfo {
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+	transition: none;
+}
+
+#findSheet {
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+	transition: none;
+}
+
+#pick_NonPick {
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+	transition: none;
+}
+
+#lblCreate {
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+	transition: none;
+}
+
+/*#lblPrint {
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+	transition: none;
+}*/
+
+
+/*==============================================================================================================*/
+
+
+
+
+
+/*==============================================================================================================
+						4.0 Footer Styles
+================================================================================================================*/
+
+
+.footer {
+	border-top: solid 1px #eee;
+	padding: 40px 0;
+	text-align: center;
+}
+
+/*==============================================================================================================*/

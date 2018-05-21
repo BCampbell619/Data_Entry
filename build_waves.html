@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waving &ndash; Wave Sheet | Big 5 Documentation</title>
+<link href="waver.css" rel="stylesheet" type="text/css">
+<script src="JS/functions.js"></script>
+<script src="JS/waveSheet.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<nav class="mainNav">
+
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li class="dropdown"><button>WAVING</button>
+
+			<div class="drop-content">
+
+			<a href="#" onmouseover="openRoute('sub-route', 'sub-wave', 'sub-task')">Routing</a>
+			<div id="sub-route">
+			<a href="open_route.html">Open Routes</a>
+			<a href="close_route.html">Close Routes</a>
+			<a href="create_route.html">Create Routes</a>
+			</div>
+
+			<a href="#" onmouseover="openWave('sub-wave', 'sub-route', 'sub-task')">Waving</a>
+			<div id="sub-wave">
+			<a href="build_waves.html">Build Waves</a>
+			<a href="wavesheet.html">Wave Sheet</a>
+			<a href="#">Shortages</a>
+			<a href="#">Forceloads</a>
+			<a href="invoice.html">Invoicing</a>
+			<a href="reports.html">WM Reports</a>
+			</div>
+
+			<a href="#" onmouseover="openTask('sub-task', 'sub-wave')">Tasking</a>
+			<div id="sub-task">
+			<a href="task_release.html">Releasing Tasks</a>
+			<a href="build_tasks.html">Build Tasks</a>
+			<a href="wave_replen.html">Wave Replen Rpt</a>
+			</div>
+
+			</div>
+
+			</li>
+
+			<li class="dropdown" onmouseover="resetSub('sub-route', 'sub-wave', 'sub-task')"><button>PUT AWAY</button>
+
+			<div class="drop-content"><a href="a2a.html">Active to Active</a></div></li>
+
+			<li class="dropdown"><button>APPOINTMENTS</button>
+
+			<div class="drop-content"></div></li>
+
+		</ul>
+	
+	</nav><!-- end of mainNav class -->
+
+	<section id="hero">
+
+		<h1>Waving</h1>
+
+	</section><!-- end of hero section -->
+
+	<section id="showMe">
+
+		<div class="head">
+
+			<h1>Building Waves</h1>
+
+		</div><!-- end of head class in shoeMe section -->
+
+		<div class="body">
+
+			<p class="focus"><strong>FOUCS&#58;</strong> This guide takes a step by step look at 
+			the process of building a wave&#46; At the end of this guide an emulator is available 
+			to use as practice for the concepts outlined in this guide&#46;</p><!-- end of focus class in body class --><br>
+
+			<div class="subHead">
+
+				<h2>Menu &amp; Criteria Selection</h2>
+
+			</div><!-- end of subHead class in body class -->
+
+			<div class="example">
+
+				<p>Within the Wave&#47;Route Menu option 20 &ndash; &lsquo;Build Retail Store 
+				Waves&rsquo; &amp; option 21 &ndash; &lsquo;Build eComm Waves&rsquo; are the 
+				options to use when building waves&#46;</p><br>
+
+				<p>After selecting either one of those options you will be presented this 
+				screen&#58;</p><br>
+
+				<img src="images/waving/wave_building/wvbSelection.png" alt="Wave Building Selection Screen" class="photo-sizing">
+
+			</div><!-- end of example in body class -->
+
+			<div class="subHead">
+
+				<h2>Day&#47;Shift&#47;Rule Nbr</h2>
+
+				<p>Day&#44; Shift&#44; and Rule number are the options presented in this screen&#46; 
+				The only one that you need to remember of the three is Day&#46; As discussed in 
+				the pre&ndash;	wave cube report <a href="reports.html#pre">section</a> of the 
+				Reports page&#44; Day represents the day of the week &#40;Monday &#61; 1&#44; 
+				Tuesday &#61; 2&#44; etc&#41; in a numerical form&#46;</p>
+
+			</div><!-- end of subHead in body class -->
+
+			<p class="note"><span class="italy"><strong>NOTE&#58;</strong>It is not necessary 
+			to select a day when working with eComm waves&#46; There are only two to select from &ndash; 
+			&lsquo;Singles&rsquo; or &lsquo;Multi&rsquo;&#46; Retail schedules can have 70 to 90&#43; 
+			rules across multiple days&#46; Selecting a day helps sort through those many rules&#46;</span></p>
+
+			<div class="subHead">
+
+				<h2>Schedule&#47;Rule Listings</h2>
+
+			</div><!-- end of subHead in body class -->
+
+			<div class="example">
+
+				<p>Retail&#58;</p><br>
+
+				<img src="images/waving/wave_building/wvbDisplay.png" alt="Schedule Rule List" class="photo-sizing">
+
+				<p>eComm&#58;</p><br>
+
+				<img src="images/waving/wave_building/wvbeComm.png" alt="eComm Schedule Rule List" class="photo-sizing">
+
+			</div><!-- end of example class in body class -->
+			
+			<div class="subHead">
+			
+			    <p>Above is what you would see after selecting a day in the case of retail&#44; or just entering through to the two eComm rules&#46; 
+			    Each one of these rules&#44; except for eComm&#44; holds a layer of detail underneath&#46; The detail of each rule is logic that tells 
+			    the system to select one store and build a wave for that store&#46; So simply put&#44; each rule contains one store to build&#46;</p><br>
+			    
+			    <h2>Requirements &amp; Best Practices</h2>
+			
+			    <p class="note"><strong>NOTE&#58;</strong> First&#44; before building waves there needs to be a double check between the shipping cubes and the 
+			    wave sheet&#46; Both sheets need to match one another before proceeding with building out the schedule&#46; If this is omitted&#44; this could 
+			    increase errors and cause the re&ndash;work of the wave sheet&#46;<br><br>
+			    <span class="italy">&#42;&#42;It is required to check the schedules before building&#42;&#42;</span></p><br>
+			
+			    <p>To verify a store that a rule contains take an option 5 against the rule and press &lsquo;Enter&rsquo;&#46; The depiction below is what will be displayed 
+			    to you&#58;</p>
+			
+			</div><!-- end of subHead in body class -->
+			
+			<div class="example">
+			    
+			    <p>The detail of a rule&#58;</p><br>
+			    
+			    <img src="images/waving/wave_building/wvbRuleView.png" alt="View details of a rule number" class="photo-sizing">			    
+			    
+			</div><!-- end of example rule view class in body class -->
+			
+			<div class="subHead">
+			
+			    <p>It may be a good practice to check the first 3 to 5 rules before building &ndash; just to make sure everything looks right&#46; 
+			    The process of building waves is pretty simple and straight forward&#59; however&#44; it is also easy to make a mistake&#44; If you 
+			    ever become unsure of where you&#39;re at&#44; slow down and check yourself before proceeding&#46; Double checking and triple checking is 
+			    preferred over doubling or tripling your work because of mistakes&#46;</p>
+			    
+			    <h2>Building a Wave</h2>
+			    
+			    <p>To build a wave the first step is to &lsquo;Activate&rsquo; the rule&#46; This is acheived by taking option &lsquo;A&rsquo; against 
+			    the rule and pressing &lsquo;Enter&rsquo;&#46; Once this is done the rule will look as it does in the depiction below&#46; Only one 
+			    rule is activated and submitted at a time&#46;</p>
+			
+			</div><!-- end of subHead in body class -->
+			
+			<div class="example">
+			    
+			    <img src="images/waving/wave_building/wvbActiveStatus.png" alt="Rule activated" class="photo-sizing">
+			    
+			</div><!-- end of example active status in body class -->
+			
+			<div class="subHead">
+			    
+			    <p class="note"><strong>NOTE&#58;</strong> A behavior of the system you will need to be aware of is depicted below&#46; The rule list is sorted by 
+			    the status of the rule&#46; Since &lsquo;A&rsquo; comes before &lsquo;I&rsquo;&#44; the active rule always appears at the top of the list despite 
+			    its rule number&#46; Once you activate a rule you know you can always find it at the top of the list&#46;</p>
+			    
+			</div><!-- end of subHead class in body class -->
+			
+			<div class="example">
+			    
+			    <img src="images/waving/wave_building/wvbRuleTop.png" alt="Active rules move to the top" class="photo-sizing">
+			    
+			</div><!-- end of example rule top in body class -->
+			
+			<div class="subHead">
+			    
+			    <p>After a rule has been activated&#44; press function key &lsquo;F16&rsquo;&#46; This will bring up the 
+			    &lsquo;Generate Retail Pick Wave&rsquo; screen as shown below&#46; All the information on this screen need not overwhelm you&#46; 
+			    All that needs to be done on this screen is to press function key &lsquo;F16&rsquo; again to submit the wave&#46; Once the wave 
+			    is submitted you will be taken back to the rule list screen&#46;</p><br>
+			    
+                <p class="note"><strong>NOTE&#58;</strong> Something to be aware of when building waves is <strong>multiple active rules</strong>&#46;<br><br>
+                
+                <span class="italy">Scenario 1&#58;</span> When a wave has been submitted through the &lsquo;Generate Retail Pick Wave&rsquo; screen and 
+                instead of returning to the rule list screen you receive another &lsquo;Generate Retail Pick Wave&rsquo; screen &ndash; you have another 
+                rule active from another day&#47;schedule&#46; This will only occur when rules are active for two different days &#40;i&#46;e&#46; one on 
+                Monday and one on Tuesday&#41;&#46; Taking a look at the &lsquo;Wave Description&rsquo; field in the upper right hand corner will tell you 
+                what day the rule is on&#46; If you manage to avoid submitting the errant rule&#44; simply press function key &lsquo;F12&rsquo; two times 
+                to return to the selection screen and select the day to inactivate the rule&#46; If you do submit the errant rule&#44; then you will end 
+                up with a &lsquo;dead&rsquo; wave and will have to re&ndash;number your wave sheet&#46;<br><br>
+			    
+			    <span class="italy">Scenario 2&#58;</span> However&#44; if two rules are active on the same schedule &#40;i&#46;e&#46; two on Monday&#41; 
+			    then there will only one submission from the &lsquo;Generate Retail Pick Wave&rsquo; screen&#46; The wave&#44; however&#44; will have two 
+			    stores within it&#46; This scenario is worse than the first&#46; There are methods available to reverse this error&#44; but please prevent 
+			    it from happening in the first place&#46;<br><br>
+			    
+			    Both of the scenarios need to be avoided when possible&#46;</p>
+			    
+			</div><!-- end of subHead class in the body class -->
+			
+			<div class="example">
+			    
+			    <img src="images/waving/wave_building/wvbGenerate.png" alt="Generate wave screen" class="photo-sizing">
+			    
+			</div><!-- end of example generate in body class -->
+			
+			<div class="subHead">
+			    
+			    <p>After the wave has been submitted and you return to the rule list screen the next step is to &lsquo;Inactivate&lsquo; the rule&#46; This is accomplished 
+			    by taking option &lsquo;I&rsquo; against the rule and pressing &lsquo;Enter&rsquo;&#46; The rule will be inactive and return to its place in sequence&#46; 
+			    This will be repeated for each rule&#44; one by one&#44; until each rule for the day has been submitted&#46;</p>
+			    
+			</div>
+			
+			<div class="example">
+			    
+			    <img src="images/waving/wave_building/wvbDisplay.png" alt="Inactivated rule" class="photo-sizing">
+			    
+			</div><!-- end of example display in body class -->
+
+		</div><!-- end of body class in shoeMe section -->
+
+	</section><!-- end of showMe section -->
+	
+	<section id="practice">
+	    
+	    <h2>Practice</h2>
+	    
+	    <p>Pratice building waves by activating&#44; submitting&#44; and inactivating the rules&#46;
+	     Type &lsquo;1&rsquo; in the first field and click &lsquo;Select&rsquo;&#46;</p>
+	    
+	    <div id="route-practice">
+	        
+	        <form action="build_waves_1.html#practice" method="post" name="wvb_Practice" id="wvb_Practice">
+            
+                <h2>Wave Selection Criteria &#40;Retail&#41;</h2>
+	            
+	            <table id="smTbl">
+	                
+	                <tbody>
+	                    
+	                    <tr>
+	                        
+	                        <td id="wvb_Main">Starting Day&#47;Shift&#47;Rule Nbr &#46; &#46; &#58;</td>
+	                        <td id="wvb_Small"><input type="text" name="shiftSelect" id="shiftSelect" maxlength="1"></td>
+                            <td id="wvb_Med"><input type="text" disabled></td>
+                            <td id="wvb_Lg"><input type="text" disabled></td>
+	                        
+	                    </tr>
+	                    
+	                </tbody>
+	                
+	                <tfooter>
+	                    
+	                    <tr>
+	                        
+	                        <td id="wvb_Submit"><button type="button" onclick="waveBuild.selShift('route-practice')">Select</button></td>
+	                        
+	                    </tr>
+	                    
+	                </tfooter>
+	                
+	            </table><!-- end of table in form of practice section -->
+	            
+	        </form><!-- end of form in route-practice in practice section -->
+	        
+	    </div><!-- end of route-practice div in practice section -->
+	    
+	</section>
+
+	<footer id="Footer">
+
+		<div class="footer">
+
+			<p>&copy;2017 Big 5 Sporting Goods</p>
+
+		</div>
+
+		
+
+	</footer><!-- end of footer section -->
+
+
+
+</div><!-- end of wrapper class -->
+
+</body>
+
+</html>

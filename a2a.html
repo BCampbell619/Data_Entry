@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Active to Active Moves | Big 5 Documentation</title>
+<link rel="stylesheet" href="putaway.css">
+<script src="functions.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+
+	<nav class="mainNav">
+
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li class="dropdown"><button>WAVING</button>
+
+			<div class="drop-content">
+
+			<a href="#" onmouseover="openRoute('sub-route', 'sub-wave', 'sub-task')">Routing</a>
+			<div id="sub-route">
+			<a href="open_route.html">Open Routes</a>
+			<a href="close_route.html">Close Routes</a>
+			<a href="create_route.html">Create Routes</a>
+			</div>
+
+			<a href="#" onmouseover="openWave('sub-wave', 'sub-route', 'sub-task')">Waving</a>
+			<div id="sub-wave">
+			<a href="build_waves.html">Build Waves</a>
+			<a href="wavesheet.html">Wave Sheet</a>
+			<a href="#">Shortages</a>
+			<a href="#">Forceloads</a>
+			<a href="invoice.html">Invoicing</a>
+			<a href="reports.html">WM Reports</a>
+			</div>
+
+			<a href="#" onmouseover="openTask('sub-task', 'sub-wave')">Tasking</a>
+			<div id="sub-task">
+			<a href="task_release.html">Releasing Tasks</a>
+			<a href="build_tasks.html">Build Tasks</a>
+			<a href="wave_replen.html">Wave Replen Rpt</a>
+			</div>
+
+			</div>
+
+			</li>
+
+			<li class="dropdown" onmouseover="resetSub('sub-route', 'sub-wave', 'sub-task')"><button>PUT AWAY</button>
+
+			<div class="drop-content"><a href="a2a.html">Active to Active</a></div></li>
+
+			<li class="dropdown"><button>APPOINTMENTS</button>
+
+			<div class="drop-content"></div></li>
+
+		</ul>
+	
+	</nav><!-- end of mainNav class -->
+
+	<section id="hero">
+
+		<h1>Active to Active Moves</h1>
+		<p>Systematic Processes</p>
+
+	</section><!-- end of hero id section -->
+
+	<section id="Menus">
+
+		<!-- <div class="head">
+
+			<h1>Menu Options &amp; Names</h1>
+
+		</div> end of head class (Menus) -->
+
+		<div class="body">
+
+			<p class="focus">
+			
+			<strong>FOCUS&#58;</strong> This document explains the systematic processes of 
+			creating a label for each SKU that is being moved from one active to another&#46;
+			The menus that are associated with each process are also depicted with this document&#46;
+			Furthermore&#44; any policies that are associated with this process will be explained as well&#46;
+			
+			</p><!-- end of focus class (Menus) -->
+
+			<div class="policy">
+
+			<p><strong>NOTICE&#58;</strong> Active to active moves can occur for a variety of reasons&#46; 
+			The following are examples of why active to active moves may occur&#58;</p>
+
+			<ul type="circle">
+
+				<li>Projects</li>
+				<li>Product Alignment</li>
+				<li>Correct Bad Put Aways</li>
+				<li>Free Up Locations for Put Away</li>
+
+			</ul>
+
+			<p>The important thing to understand is that all Active to Active moves will need
+			approval before being put together&#46; Supervision will either come to the data entry
+			clerk with a move&#47;project or&#44; the data entry clerk will need to get approval
+			from supervision to make moves&#46;</p>
+
+			</div><!-- end of policy class -->
+
+			<div class="subBody">
+
+				<h2>The Active to Active Sheet</h2>
+
+				<h4 onclick="overShow('overview')" ondblclick="hide('overview')">Overview</h4>
+
+				<div id="overview">
+
+				<p>Active to active moves are made up on an Excel Spreadsheet template such as in the 
+				example below&#58;</p>
+
+				<div class="photo">
+
+					<img src="images/a2a_SpreadSheet.png" alt="Active2Active Spreadsheet Template">
+
+				</div><!-- end of photo class -->
+
+				<p>The spreadsheet handles the following attributes &#40;<i>click attribute to view description</i>&#41;&#58;</p>
+
+				<ul id="actList">
+
+					<li onclick="a2a_Show('sku')">SKU</li>
+				
+					<div id="sku"><p>The SKU column handles the SKU numbers that are 
+					moving from one location to another</p></div>
+
+					<li onclick="a2a_Show('desc')">DESCRIPTION</li>
+
+					<div id="desc"><p>The Description of the product being moved is placed 
+					in the description column of the sheet</p></div>
+
+					<li onclick="a2a_Show('from')">FROM</li>
+
+					<div id="from"><p>The &lsquo;FROM&rsquo; column handles the location that the 
+					product is moving from &#40i&#46;e&#46; the old location&#41;</p></div>
+
+					<li onclick="a2a_Show('qty')">QTY</li>
+
+					<div id="qty"><p>The QTY column takes the SKU&#39;s current inventory 
+					that is in its current active location &#40;the &lsquo;FROM&rsquo; location&#41;</p></div>
+
+					<li onclick="a2a_Show('to')">TO</li>
+
+					<div id="to"><p>The &lsquo;TO&rsquo; column handles the &lsquo;new&rsquo; location 
+					to which the SKU is being moved</p></div>
+
+					<li onclick="a2a_Showlg('pick')">PICKING</li>
+
+					<div id="pick"><p>The Picking column is an important column&#46; There are two options 
+					that can be put in this column &ndash; &lsquo;Y&rsquo; or &lsquo;N&rsquo;
+					The significance of whether a SKU is picking or not will be explained 
+					in more detail below&#46;</p></div>
+
+
+				</ul>
+
+				</div>
+
+				<h4 onclick="findShow('findSheet')" ondblclick="hide('findSheet')">Where Do I Find The Sheet&#63;</h4>
+				
+				<div id="findSheet">
+				
+				<p>The Active to Active spreadsheet template can be found in the company&#39;s 
+				public drive in the Data Entry Folder&#46; The following is the file path to get to 
+				the folder&#58;</p><br>
+
+				<p>G&#58;&#92;DC&#92;Data Entry&#92;Putaway</p><br>
+
+				<p>or you can download it here&#58;</p><br>
+
+				<a href="files/Active to Active Move Template.xls" id="fileLink">Active to Active Move Template</a>
+
+				</div>
+
+				<h4 onclick="infoShow('findInfo')" ondblclick="hide('findInfo')">Where Do I Find The Information To Put on The Sheet&#63;</h4>
+
+				<div id="findInfo">
+
+				<p>The information can be found in a report titled &lsquo;Stock Listing By Active Aisle&#46;&rsquo; 
+				This report has different versions that give you different information&#46; Each can be 
+				found in the &lsquo;Reports&rsquo; folder in the &lsquo;Stock Listing New&rsquo; folder&#46;
+				Here&#39;s the path for the reports&#58;</p><br>
+
+				<p>G&#58;&#92;DC&#92;Reports&#92;Stock Listing New</p><br>
+
+				<p>Below is a depiction of what the stock listing report will give you&#58;</p><br>
+
+				<img src="images/a2a_StockList.png" alt="Stock Listing Report">
+
+				<p>The SKUs are under the &lsquo;SKU&rsquo; heading and the &lsquo;description&rsquo;
+				 is found in the column next to the SKU&#46; The &lsquo;from&rsquo; location is
+				 found under the &lsquo;Location&rsquo; heading and the &lsquo;QTY&rsquo; is 
+				found under the &lsquo;BOH&rsquo; heading&#46; Any of the other headings are 
+				not necessarily always pertinent to the active to active move process&#46; These
+				attributes can be copy and pasted into the active to active sheet template&#46;</p><br>
+
+				<p>The &lsquo;to&rsquo; location can be found via the system or through a report such as 
+				another stock listing report of another aisle&#46;</p>
+
+				</div>
+
+				<h4 onclick="pickShow('pick_NonPick')" ondblclick="hide('pick_NonPick')">Picking Vs&#46; Non&ndash;Picking</h4>
+				
+				<div id="pick_NonPick">
+
+				<p><strong>PICKING</strong> &ndash; When an item is picking there has to be some coordination done between the Forklift
+				Department and the Orderfilling Department before it can be moved systematically&#46;</p><br>
+
+				<p>Here are the steps to follow when communicating a Picking move&#58;</p><br>
+
+				<div class="policy">
+
+					<ul>
+
+						<li>Make up Active to Active Sheet</li>
+						<li>Make up &amp; print the labels for Forklift</li>
+						<li>Update MIN&#47;MAX&#39;s for the &lsquo;To&rsquo; locations</li>
+						<li>Email moves to Orderfilling&#44; Forklift&#44; &amp; Upper Management</li>
+
+						<ul id="innerList">
+
+							<li>Signify within the email where the moves are taking place and that they&#39;re picking</li>
+							<li>Signify the purpose of the moves</li>
+							<li>Signify that the moves will not be keyed in until Orderfilling or Stock gives clearance
+							to do so</li>
+							<li>Signify that the MIN&#47;MAX&#39;s have been updated</li>
+
+						</ul>
+
+					</ul>
+
+				</div><!-- end of policy class (subBody) -->
+
+				<p>Once the Orderfilling or Forklift Supervisor responds to the email stating that the moves can be &lsquo;keyed in&rsquo; 
+				it is safe to systematically move the SKUs&#46;</p><br>
+
+				<p><strong>NON&ndash;PICKING</strong> &ndash;When an item is <i>not</i> picking then the 
+				process of systematically moving an item can move more quickly&#46;</p><br>
+
+				<p>Here are the steps for non&ndash;picking moves&#58;</p><br>
+
+				<div class="policy">
+
+					<ul>
+
+						<li>Make up Active to Active Sheet</li>
+						<li>Make up and print labels for Forklift</li>
+						<li>Systematically move the SKUs to the &lsquo;To&rsquo; locations</li>
+						<li>Update MIN&#47;MAX&#39;s for the &lsquo;To&rsquo; locations</li>
+						<li>Email moves to Orderfilling&#44; Forklift&#44; &amp; Upper Management</li>
+
+						<ul id="innerList">
+
+							<li>Signify within the email where the moves are taking place and that they&#39;re non&ndash;picking</li>
+							<li>Signify the purpose of the moves</li>
+							<li>Signify that the moves <i>have been</i> keyed in</li>
+							<li>Signify that the MIN&#47;MAX&#39;s have been updated</li>
+
+						</ul>
+
+					</ul>
+
+				</div><!-- end of policy class (subBody) -->
+
+				<div class="note">
+
+					<p><strong>NOTE&#58;</strong> There is a time during the day shift that one
+					 should be cautious when creating active to active non&ndash;picking moves
+					&#46; At approximately 11&#58;30AM the new wave schedule starts to build&#46;
+					 When this occurs a non&ndash;picking item <i>can</i> go from non&ndash;picking
+					 to picking&#46; When doing active to active moves around this time frame 
+					it is best to wait until the waves are done building before proceeding&#46;</p>
+
+				</div><br><!-- end of note class -->
+
+				<p>It is still good practice to ask for an email responce from the Forklift department 
+				to signify that the moves have been completed&#46; This provides a way of tracking
+				the completion of moves for everyone involved &ndash; especially when there are
+				several sets of non&ndash;picking moves&#46;</p>
+
+				</div>
+
+			</div><!-- end of subBody class -->
+
+			<div class="subBody">
+
+				<h2>Case Label Creation &amp; Print</h2>
+
+
+				<h4 onclick="lblCrShow('lblCreate')" ondblclick="hide('lblCreate')">Creation Process</h4>
+
+				<div id="lblCreate">
+
+					<p>Within the &lsquo;Putaway Specialist Menu&rsquo; under the submenu 
+					heading &lsquo;Misc&rsquo; is a menu option titled &lsquo;
+					RF Inbound Menu&#46;&rsquo;</p>
+
+					<img src="images/a2a_RFMenu.png" alt="RF Menu">
+
+					<p>Within the &lsquo;RF Inbound Menu&rsquo; is another menu option 
+					titled &lsquo;Pack Cs Fr Actv&rsquo; which stands for Pack Case 
+					From Active&#46;</p>
+
+					<img src="images/a2a_PCfAMenu.png" alt="Pack Case From Active Menu">
+
+					<p>The first step in the label creation process is to create the case label number&#46;
+					The pattern of the case lable number is a leading four zeros followed by
+					 the <span id="cs_date">date &#40;YYYYMMDD&#41;</span>&#44; which is followed by the 
+					<span id="cs_sku">SKU</span> of the item&#46;</p>
+
+					<img src="images/a2a_CaseLabel.png" alt="Case Label Format">
+
+					<p>After the case label number has been entered in the case field you will be 
+					prompted for a SKU&#46; Enter the SKU to proceed to the next step&#46;</p>
+
+					<img src="images/a2a_CaseSKU.png" alt="Case SKU Entry Field">
+
+					<p>The last step is to assign a single unit to the case&#46; Enter &lsquo;1&rsquo;
+					 in the QTY field and then confirm the case&#46;</p>
+
+					<img src="images/a2a_CaseQTY.png" alt="Case QTY Entry Field">
+
+					<p>This process will be repeated for however many SKUs are on the active
+					to active move sheet template&#46;</p>
+
+				</div>
+
+				<div id="lblPrint">
+
+				<h4>Print Process</h4>
+
+				</div>
+
+			</div><!-- end of subBody class -->
+
+		</div><!-- end of body class (Menus) -->
+
+	</section><!-- end of Menus section -->
+
+	<footer class="footer">
+
+		<p>&copy;2017 Big 5 Sporting Goods</p>
+
+	</footer>
+
+</div><!-- end of wrapper class -->
+</body>
+</html>

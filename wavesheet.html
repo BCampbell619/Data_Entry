@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waving &ndash; Wave Sheet | Big 5 Documentation</title>
+<link href="waver.css" rel="stylesheet" type="text/css">
+<script src="JS/functions.js"></script>
+<script src="JS/waveSheet.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<nav class="mainNav">
+
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li class="dropdown"><button>WAVING</button>
+
+			<div class="drop-content">
+
+			<a href="#" onmouseover="openRoute('sub-route', 'sub-wave', 'sub-task')">Routing</a>
+			<div id="sub-route">
+			<a href="open_route.html">Open Routes</a>
+			<a href="close_route.html">Close Routes</a>
+			<a href="create_route.html">Create Routes</a>
+			</div>
+
+			<a href="#" onmouseover="openWave('sub-wave', 'sub-route', 'sub-task')">Waving</a>
+			<div id="sub-wave">
+			<a href="build_waves.html">Build Waves</a>
+			<a href="wavesheet.html">Wave Sheet</a>
+			<a href="#">Shortages</a>
+			<a href="#">Forceloads</a>
+			<a href="invoice.html">Invoicing</a>
+			<a href="reports.html">WM Reports</a>
+			</div>
+
+			<a href="#" onmouseover="openTask('sub-task', 'sub-wave')">Tasking</a>
+			<div id="sub-task">
+			<a href="task_release.html">Releasing Tasks</a>
+			<a href="build_tasks.html">Build Tasks</a>
+			<a href="wave_replen.html">Wave Replen Rpt</a>
+			</div>
+
+			</div>
+
+			</li>
+
+			<li class="dropdown" onmouseover="resetSub('sub-route', 'sub-wave', 'sub-task')"><button>PUT AWAY</button>
+
+			<div class="drop-content"><a href="a2a.html">Active to Active</a></div></li>
+
+			<li class="dropdown"><button>APPOINTMENTS</button>
+
+			<div class="drop-content"></div></li>
+
+		</ul>
+	
+	</nav><!-- end of mainNav class -->
+
+	<section id="hero">
+
+		<h1>Waving</h1>
+
+	</section><!-- end of hero id -->
+
+	<section id="showMe">
+
+		<div class="head">
+
+			<h1>The Wave Sheet</h1>
+
+		</div><!-- end of head class (showMe) -->
+
+		<div class="body">
+
+			<p class="focus"><strong>FOCUS&#58;</strong>This guide will explain what the Wave Sheet is 
+			and what information it provides to the waver&#46; The Wave Sheet is central to the 
+			coordination of work the waver handles&#46;</p>
+
+			<div class="example">
+
+				<p>A snap shot of what the Wave Sheet looks like&#58;</p><br>
+				<img src="images/waving/wave_sheet.png" alt="From and To Fields of Route Menu" class="photo-sizing">
+
+			</div><!-- end of example class -->
+
+			<p>The Wave Sheet contains a plethra of information&#46; This guide will proceed with 
+			simple&#44; straight&ndash;forward illustrations of each piece of information found on the 
+			Wave Sheet&#46;</p><br>
+
+		</div><!-- end of body class -->
+
+	</section><!-- end of showMe id -->
+
+	<section>
+
+		<div class="head">
+
+			<h1>Wave Sheet Columns</h1>
+
+		</div><!-- end of wave sheet columns head class -->
+
+		<div class="slideContain">
+
+			<div class="sheet-info">
+
+				<h3>Shipping Doors</h3>
+
+				<figure>
+
+					<img src="images/waving/wvg_DoorNbr.png" alt="Display of Wave Sheet door numbers">
+				
+				<figcaption class="fig-text">
+
+					The text fields that run down the left and the right sides of the wave sheet 
+					contain the shipping door numbers &ndash; Ex&#58; N125
+
+				</figcaption>
+
+
+				</figure>
+
+			</div><!-- end of sheet-info class doors -->
+
+			<div class="sheet-info">
+
+				<h3>Wave Numbers</h3>
+
+				<figure>
+
+				<img src="images/waving/wvg_WaveNbr.png" alt="Display of Wave Sheet wave numbers">
+
+				<figcaption class="fig-text">
+
+					The wave numbers are always to the left of the store 
+					numbers&#46; They serially go from the first store up till the 
+					last store on the wave sheet&#46;
+
+				</figcaption>
+
+				</figure>
+
+			</div><!-- end of sheet-info class numbers -->
+
+			<div class="sheet-info">
+
+				<h3>Store Numbers</h3>
+
+				<figure>
+
+				<img src="images/waving/wvg_StoreRoute.png" alt="Display of Wave Sheet store numbers">
+
+				<figcaption class="fig-text">
+
+					Store numbers are to the right of the wave number&#44; and also represents 
+					the route number for a wave&#46; The store&#44; wave&#44; &amp; door are all 
+					interconnected&#46;
+
+				</figcaption>
+
+
+				</figure>
+
+			</div><!-- end of sheet-info class stores -->
+
+			<a class="prev" onclick="objCarousel.prevSlide()">&#10094;</a>
+			<a class="next" onclick="objCarousel.nextSlide()">&#10095;</a>
+
+		</div><br><!-- end of slideContain -->
+
+		<div class="body">
+
+			<p>After reviewing the information given above you should understand the first dependency of 
+			the Wave Sheet&#59; that is&#44; a wave number has a route and a route has a shipping 
+			door&#46; Remember a route is synonymous with a store&#44; as explained in the 
+			<a href="open_route.html">Routing</a> section&#46;</p><br>
+
+		</div><!-- end of body class -->
+
+	</section>
+
+	<section id="boxes">
+
+		<div class="head">
+
+			<h1>Wave Sheet Boxes</h1>
+
+		</div><!-- end of wave sheet boxes head class -->
+
+		<div class="body">
+
+			<p>Below is a depiction of the square boxes found next to the store column on the wave 
+			sheet&#46;</p><br>
+			
+			<small><span class="italy">&#42;Hover over any of the 5 boxes to view their explanation&#46;</span></small>
+
+		</div><!-- end of class body -->
+
+		<div class="float-body">
+
+			<div id="door">
+
+				<p>N105</p>
+
+			</div><!-- end of door id -->
+
+			<div id="wave">
+
+				<p>7</p>
+
+			</div><!-- end of wave id -->
+
+			<div id="store">
+
+				<p><strong>00345</strong></p>
+
+			</div><!-- end of store id -->
+
+			<div id="boxes-active">
+
+				<div onmouseover="boxShow('active-explain')" onmouseout="boxHide('active-explain')">
+
+					<div id="active-explain">
+
+						<p>This first box is checked when the route has been activated&#46;</p>
+
+					</div>
+
+				</div>
+
+			</div><!-- end of boxes active id -->
+
+			<div id="boxes-task">
+
+				<div onmouseover="boxShow('task-explain')" onmouseout="boxHide('task-explain')">
+
+					<div id="task-explain">
+
+						<p>This second box is checked when the &lsquo;C&#44; D&#44;
+				 		&amp; Q&rsquo; tasks have been released for that wave&#46;</p>
+
+					</div>
+
+				</div>
+
+			</div><!-- end of boxes task id -->
+
+			<div id="boxes-release">
+
+				<div onmouseover="boxShow('release-explain')" onmouseout="boxHide('release-explain')">
+
+					<div id="release-explain">
+
+						<p>This third box is checked when the wave tasks have been 
+						released&#46;</p>
+
+					</div>
+
+				</div>
+
+			</div><!-- end of boxes release id -->
+
+			<div id="boxes-close">
+
+				<div onmouseover="boxShow('close-explain')" onmouseout="boxHide('close-explain')">
+
+					<div id="close-explain">
+
+						<p>This fourth box is checked when the wave has been picked&#44; 
+						loaded&#44; &amp; the route has been closed&#46;</p>
+
+					</div>
+
+				</div>
+
+			</div><!-- end of boxes close id -->
+
+			<div id="boxes-invoice">
+
+				<div onmouseover="boxShow('invoice-explain')" onmouseout="boxHide('invoice-explain')">
+
+					<div id="invoice-explain">
+
+						<p>This fifth box is checked when the wave has been invoiced&#44;
+						 thus signifying the completion of the wave&#46;</p>
+					
+					</div>
+
+				</div>
+
+			</div><!-- end of boxes invoice id -->
+
+		</div><!-- end of float-body class -->
+
+		</section><!-- end of boxes id section -->
+
+	</section><!-- end of float section -->
+
+	<section>
+
+		<div class="body">
+
+			<p>From left to right the boxes are marked in that succession &ndash; from activation to 
+			invoice and everything in between&#46; Box 2 of the boxes does has a bit of detail that 
+			will be pointed out below&#46;</p><br>
+
+			<div class="subHead">
+
+				<h2>Box 2 &ndash; C&#44; D&#44; &amp; Q Tasks <small>&#40;<span class="italy">Aisles QT &amp; QU are excluded from this</span>&#41;</small></h2>
+
+				<p>As the hover box describes&#44; this box is marked when the C&#44; D&#44; &amp; 
+				Q tasks have been released for the wave&#46; However&#59; for these modules &ndash; 
+				C&#44; D&#44; &amp; Q &ndash; these tasks are released 10 waves ahead of the last 
+				opened wave&#46; For example&#44; if you have released through wave 44&#44; then 
+				the eligible tasks for C&#44; D&#44; &amp; Q will be released through wave 54&#46;
+				The wave sheet will then reflect this by having the second box checked through wave 
+				54&#46;</p>
+
+			</div><!-- end of sub head for box id -->
+
+		</div><!-- end of body class for box id -->
+
+	</section>
+
+	<section id="format">
+
+		<div class="head">
+
+			<h1>Wave Sheet Formatting</h1>
+
+		</div><!-- end of head class for format section -->
+
+		<div class="body">
+
+			<p class="focus"><strong>FOCUS&#58;</strong> Wavesheet formatting. The wavesheet needs to be formatted in order to look the way it does above&#46; 
+			This section will show the formatting tips for correctly formatting the wavesheet&#46;</p>
+
+			<div class="subHead">
+
+				<h2>Hide Columns</h2>
+
+				<p>In the Excel sheet you&#39;ll need to hide columns D to G&#44; L to O&#44; 
+				T to W&#44; AB to AE&#44; and AJ to AM&#46;</p><br>
+
+				<small class="italy">Below is a small example of what the sheet should look like when the afore 
+				mentioned columns are hidden&#46;</small>
+
+			</div><!-- end of subHead class for format section -->
+
+			<div class="waveContainer">
+
+				<table>
+
+					<thead>
+
+						<th class="col-A col-Text">A</th>
+						<th class="col-B col-Text">B</th>
+						<th class="col-C col-Text">C</th>
+						<th class="col-D col-Text hideMe">D</th>
+						<th class="col-E col-Text hideMe">E</th>
+						<th class="col-F col-Text hideMe">F</th>
+						<th class="col-G col-Text hideMe">G</th>
+						<th class="col-H col-Text">H</th>
+						<th class="col-Text" style="border: solid 1px #000;">I</th>
+						<th class="col-B col-Text">J</th>
+						<th class="col-C col-Text">K</th>
+						<th class="col-D col-Text hideMe">L</th>
+						<th class="col-E col-Text hideMe">M</th>
+						<th class="col-F col-Text hideMe">N</th>
+						<th class="col-G col-Text hideMe">O</th>
+						<th class="col-H col-Text">P</th>
+
+					</thead>
+
+					<tbody>
+
+						<tr style="background-color: orange; border: solid 1px #000;">
+
+							<td colspan="3">R_THU&ndash;B</td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td></td>
+
+						</tr>
+
+						<tr style="background-color: rgb(191, 191, 191); border: solid 1px #000;">
+
+							<td></td>
+							<td></td>
+							<td>Round 1</td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td></td>
+							<td style="background-color: black;"> </td>
+							<td></td>
+							<td>Round 2</td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td class="hideMe"></td>
+							<td></td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width">N125</td>
+							<td class="col-B col-Width">5</td>
+							<td class="col-C col-Width" style="background-color: rgb(255, 255, 0);">00458</td>
+							<td class="col-D col-Width hideMe">UT</td>
+							<td class="col-E col-Width hideMe" style="background-color: rgb(217, 217, 217);">53'GD</td>
+							<td class="col-F col-Width hideMe"> </td>
+							<td class="col-G col-Width hideMe"> </td>
+							<td class="col-H col-Width">No 14' High</td>
+							<td class="col-Width" style="background-color: black;"> </td>
+							<td class="col-B col-Width">24</td>
+							<td class="col-C col-Width" style="background-color: rgb(255, 255, 0);">00458</td>
+							<td class="col-D col-Width hideMe">UT</td>
+							<td class="col-E col-Width hideMe" style="background-color: rgb(217, 217, 217);">2-458</td>
+							<td class="col-F col-Width hideMe"> </td>
+							<td class="col-G col-Width hideMe"> </td>
+							<td class="col-H col-Width">No 14' High</td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width">N102</td>
+							<td class="col-B col-Width">6</td>
+							<td class="col-C col-Width" style="background-color: rgb(146, 208, 80);">00282</td>
+							<td class="col-D col-Width hideMe"> </td>
+							<td class="col-E col-Width hideMe"> </td>
+							<td class="col-F col-Width hideMe">Hub</td>
+							<td class="col-G col-Width hideMe"> </td>
+							<td class="col-H col-Width"> </td>
+							<td class="col-Width" style="background-color: black;"> </td>
+							<td class="col-B col-Width">25</td>
+							<td class="col-C col-Width" style="background-color: rgb(146, 208, 80);">00306</td>
+							<td class="col-D col-Width hideMe"> </td>
+							<td class="col-E col-Width hideMe"> </td>
+							<td class="col-F col-Width hideMe">Hub</td>
+							<td class="col-G col-Width hideMe"> </td>
+							<td class="col-H col-Width"> </td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width">N105</td>
+							<td class="col-B col-Width">7</td>
+							<td class="col-C col-Width">00209</td>
+							<td class="col-D col-Width hideMe">LOC</td>
+							<td class="col-E col-Width hideMe"> </td>
+							<td class="col-F col-Width hideMe">A</td>
+							<td class="col-G col-Width hideMe"> </td>
+							<td class="col-H col-Width"> </td>
+							<td class="col-Width" style="background-color: black;"> </td>
+							<td class="col-B col-Width">26</td>
+							<td class="col-C col-Width">00145</td>
+							<td class="col-D col-Width hideMe">0330</td>
+							<td class="col-E col-Width hideMe"> </td>
+							<td class="col-F col-Width hideMe">A</td>
+							<td class="col-G col-Width hideMe"> </td>
+							<td class="col-H col-Width"> </td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width">N108</td>
+							<td class="col-B col-Width">8</td>
+							<td class="col-C col-Width" style="background-color: rgb(146, 208, 80);">00410</td>
+							<td class="col-D col-Width hideMe"> </td>
+							<td class="col-E col-Width hideMe"> </td>
+							<td class="col-F col-Width hideMe">Hub</td>
+							<td class="col-G col-Width hideMe"> </td>
+							<td class="col-H col-Width"> </td>
+							<td class="col-Width" style="background-color: black;"> </td>
+							<td class="col-B col-Width">27</td>
+							<td class="col-C col-Width" style="background-color: rgb(146, 208, 80);">00502</td>
+							<td class="col-D col-Width hideMe"> </td>
+							<td class="col-E col-Width hideMe"> </td>
+							<td class="col-F col-Width hideMe">Hub</td>
+							<td class="col-G col-Width hideMe"> </td>
+							<td class="col-H col-Width"> </td>
+
+						</tr>
+
+					</tbody>
+
+					<tfooter>
+
+						<tr>
+
+							<td colspan="2"><button id="btnHide" onclick="waveSheet.hideColumns('hideMe', 'btnHide')">Hide</button></td>
+							<td colspan="7"><small class="italy">Click to simulate the hiding of the columns</small></td>
+
+						</tr>
+
+					</tfooter>
+
+				</table>
+
+			</div><!-- end of wavesheet container -->
+
+			<div class="subHead">
+
+				<h2>Add Boxes</h2>
+
+				<p>In columns H&#44; P&#44; X&#44; AF&#44; and AN the 5 boxes will need to be 
+				entered&#46;</p><br>
+
+				<p>Highlight each of the columns starting beneath the &ldquo;Round&rdquo; row and 
+				delete any text within those columns&#46;</p><br> 
+
+				<p>Next change the font to &lsquo;Wingdings&rsquo; for each of those columns&#46;</p><br>
+
+				<p>Once the font has been changed enter 5 lowercase q&#39;s into one cell of 
+				any one of those columns&#46;</p><br>
+
+				<p>Copy and paste the q&#39;s into all the remaining cells for columns H&#44; P&#44;
+				 X&#44; AF&#44; and AN&#46;</p><br>
+
+			</div><!-- end of subHead class for format section -->
+
+			<div class="waveContainer">
+
+				<table>
+
+					<thead>
+
+						<th class="col-A col-Text">A</th>
+						<th class="col-B col-Text">B</th>
+						<th class="col-C col-Text">C</th>
+						<th class="col-H col-Text">H</th>
+						<th class="col-Text" style="border: solid 1px #000;">I</th>
+						<th class="col-B col-Text">J</th>
+						<th class="col-C col-Text">K</th>
+						<th class="col-H col-Text">P</th>
+
+					</thead>
+
+					<tbody>
+
+						<tr style="background-color: orange; border: solid 1px #000;">
+
+							<td colspan="3">R_THU&ndash;B</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+
+						</tr>
+
+						<tr style="background-color: rgb(191, 191, 191); border: solid 1px #000;">
+
+							<td></td>
+							<td></td>
+							<td>Round 1</td>
+							<td></td>
+							<td style="background-color: black;"> </td>
+							<td></td>
+							<td>Round 2</td>
+							<td></td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width">N125</td>
+							<td class="col-B col-Width">5</td>
+							<td class="col-C col-Width" style="background-color: rgb(255, 255, 0);">00458</td>
+							<td class="col-H col-Width boxQ">qqqqq</td>
+							<td class="col-Width" style="background-color: black;"> </td>
+							<td class="col-B col-Width">24</td>
+							<td class="col-C col-Width" style="background-color: rgb(255, 255, 0);">00458</td>
+							<td class="col-H col-Width boxQ">qqqqq</td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width">N102</td>
+							<td class="col-B col-Width">6</td>
+							<td class="col-C col-Width" style="background-color: rgb(146, 208, 80);">00282</td>
+							<td class="col-H col-Width boxQ">qqqqq</td>
+							<td class="col-Width" style="background-color: black;"> </td>
+							<td class="col-B col-Width">25</td>
+							<td class="col-C col-Width" style="background-color: rgb(146, 208, 80);">00306</td>
+							<td class="col-H col-Width boxQ">qqqqq</td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width">N105</td>
+							<td class="col-B col-Width">7</td>
+							<td class="col-C col-Width">00209</td>
+							<td class="col-H col-Width boxQ">qqqqq</td>
+							<td class="col-Width" style="background-color: black;"> </td>
+							<td class="col-B col-Width">26</td>
+							<td class="col-C col-Width">00145</td>
+							<td class="col-H col-Width boxQ">qqqqq</td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width">N108</td>
+							<td class="col-B col-Width">8</td>
+							<td class="col-C col-Width" style="background-color: rgb(146, 208, 80);">00410</td>
+							<td class="col-H col-Width boxQ">qqqqq</td>
+							<td class="col-Width" style="background-color: black; border: solid 1px #000;"> </td>
+							<td class="col-B col-Width">27</td>
+							<td class="col-C col-Width" style="background-color: rgb(146, 208, 80);">00502</td>
+							<td class="col-H col-Width boxQ">qqqqq</td>
+
+						</tr>
+
+					</tbody>
+
+					<tfooter>
+
+						<tr>
+
+							<td colspan="9"><small class="italy">This is what the sheet 
+							should look like after the 5 boxes are entered&#46;</small></td>
+
+						</tr>
+
+					</tfooter>
+
+				</table>
+
+			</div><!-- end of wavesheet container -->
+
+			<div class="subHead">
+
+				<h2>Set Font Sizes</h2>
+
+				<p>There are two font sizes for the entire sheet that need to be set &ndash; one 
+				for the boxes &#40;q&#39;s&#41; and one for all the other text&#46;</p><br>
+
+				<p>The boxes need to be set to a font size of 32&#46;</p><br>
+
+				<p>The door numbers&#44; wave numbers&#44; and the store numbers need to be a 
+				font size of 24&#46;</p><br>
+
+				<p>Below is a small example of what the sheet should look like after the fonts have  
+				been adjusted&#46;</p>
+
+			</div><!-- end of subHead class for format section -->
+
+			<div class="waveContainer">
+
+				<table>
+
+					<thead>
+
+						<th class="col-A col-Text">A</th>
+						<th class="col-B col-Text">B</th>
+						<th class="col-C col-Text">C</th>
+						<th class="col-H col-Text">H</th>
+						<th class="col-Text" style="border: solid 1px #000;">I</th>
+						<th class="col-B col-Text">J</th>
+						<th class="col-C col-Text">K</th>
+						<th class="col-H col-Text">P</th>
+
+					</thead>
+
+					<tbody>
+
+						<tr style="background-color: orange; border: solid 1px #000;">
+
+							<td colspan="3">R_THU&ndash;B</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td style="border: solid 1px #000;"></td>
+
+						</tr>
+
+						<tr style="background-color: rgb(191, 191, 191); border: solid 1px #000;">
+
+							<td></td>
+							<td></td>
+							<td>Round 1</td>
+							<td></td>
+							<td style="background-color: black;"> </td>
+							<td></td>
+							<td>Round 2</td>
+							<td></td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width finalFontCol">N125</td>
+							<td class="col-B col-Width finalFontCol">5</td>
+							<td class="col-C col-Width finalFontCol" style="background-color: rgb(255, 255, 0);">00458</td>
+							<td class="col-H col-Width boxQ finalFontBox">qqqqq</td>
+							<td class="col-Width" style="background-color: black;"> </td>
+							<td class="col-B col-Width finalFontCol">24</td>
+							<td class="col-C col-Width finalFontCol" style="background-color: rgb(255, 255, 0);">00458</td>
+							<td class="col-H col-Width boxQ finalFontBox">qqqqq</td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width finalFontCol">N102</td>
+							<td class="col-B col-Width finalFontCol">6</td>
+							<td class="col-C col-Width finalFontCol" style="background-color: rgb(146, 208, 80);">00282</td>
+							<td class="col-H col-Width boxQ finalFontBox">qqqqq</td>
+							<td class="col-Width" style="background-color: black;"> </td>
+							<td class="col-B col-Width finalFontCol">25</td>
+							<td class="col-C col-Width finalFontCol" style="background-color: rgb(146, 208, 80);">00306</td>
+							<td class="col-H col-Width boxQ finalFontBox">qqqqq</td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width finalFontCol">N105</td>
+							<td class="col-B col-Width finalFontCol">7</td>
+							<td class="col-C col-Width finalFontCol">00209</td>
+							<td class="col-H col-Width boxQ finalFontBox">qqqqq</td>
+							<td class="col-Width" style="background-color: black;"> </td>
+							<td class="col-B col-Width finalFontCol">26</td>
+							<td class="col-C col-Width finalFontCol">00145</td>
+							<td class="col-H col-Width boxQ finalFontBox">qqqqq</td>
+
+						</tr>
+
+						<tr>
+
+							<td class="col-A col-Width finalFontCol">N108</td>
+							<td class="col-B col-Width finalFontCol">8</td>
+							<td class="col-C col-Width finalFontCol" style="background-color: rgb(146, 208, 80);">00410</td>
+							<td class="col-H col-Width boxQ finalFontBox">qqqqq</td>
+							<td class="col-Width" style="background-color: black; border: solid 1px #000;"> </td>
+							<td class="col-B col-Width finalFontCol">27</td>
+							<td class="col-C col-Width finalFontCol" style="background-color: rgb(146, 208, 80);">00502</td>
+							<td class="col-H col-Width boxQ finalFontBox">qqqqq</td>
+
+						</tr>
+
+					</tbody>
+
+					<tfooter>
+
+						<tr>
+
+							<td colspan="9"><small class="italy">This is what the sheet 
+							should look like after the fonts have been adjusted&#46;</small></td>
+
+						</tr>
+
+					</tfooter>
+
+				</table>
+
+			</div><!-- end of wavesheet container -->
+
+			<p>After these adjustments have been made to the sheet it is now print ready&#46;</p>
+
+		</div><!-- end of body class for format section -->
+
+	</section><!-- end of format section -->
+
+
+	<footer id="Footer">
+
+		<div class="footer">
+
+			<p>&copy;2017 Big 5 Sporting Goods</p>
+
+		</div>
+
+		
+
+	</footer><!-- end of footer section -->
+
+
+
+</div><!-- end of wrapper class -->
+
+<script src="carousel.js"></script>
+
+</body>
+
+</html>

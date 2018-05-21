@@ -1,0 +1,1115 @@
+/*
+
+colors:	#1C86EE - Medium Blue
+	#FAFAFA - Light Gray
+	#F0F8FF - Light Blue
+	#AD0606 - Red
+	#FFC1C1 - Light Red
+
+images:	wrt_Header	H:63px W:643px
+	wrt_Wave	H:63px W:773px
+	wrt_Aisle	H:63px W:775px
+	wrt_Green	H:30px W:780px
+	wrt_Yellow	H:30px W:780px
+	wrt_Red		H:30px W:780px
+	wrt_Asterisk	H:40px W:695px
+	wrt_User	H:23px W:695px
+
+
+Section 1.0 - Base Styles
+Section 2.0 - Navigation Styles
+Section 3.0 - Section Styles
+Section 3.1 - Hero Styles
+Section 3.2 - Content Table Styles
+Section 3.3 - Show Me Section Styles
+Section 3.4 - Detail Section Styles
+Section 3.5 - Non-Descript Styles
+Section 3.6 - Exception Styles
+Section 3.7 - Practice Styles
+Section 4.0 - Footer Styles	
+
+*/
+
+
+/*==============================================================================================================
+						1.0 Base Styles
+================================================================================================================*/
+
+*{
+	margin: 0;
+}
+body {
+	background-color: #eee;
+	font-family: sans-serif;
+}
+
+.wrapper {
+	background-color: #FFF;
+	margin: auto;
+	max-width: 1400px;
+	min-width: 970px;
+	width: 1400px;
+}
+
+a {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+p {
+    word-spacing: 1.5px;
+    line-height: 1.3;
+}
+
+/*==============================================================================================================*/
+
+
+/*==============================================================================================================
+						2.0 Navigation Styles
+================================================================================================================*/
+
+
+.mainNav {
+	background-color: #000;
+	color: #FFF;
+	position: fixed;
+	width: 1400px;
+	min-width: 970px;
+	max-width: 1400px;
+	z-index: 1;
+}
+
+.mainNav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mainNav li {
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+}
+
+.mainNav a {
+	background-color: #000;
+	color: #FFF;
+	display: block;
+	font-weight: 300;
+	margin: 0px 5px 0 0;
+	padding: 12px;
+	text-decoration: none;
+}
+
+.mainNav a:hover, .mainNav button:hover {
+	color: #FAFAFA;
+}
+
+.mainNav li button {
+	background-color: #000;
+	border: none;
+	color: #FFF;
+	display: block;
+	font-size: 16px;
+	font-weight: 300;
+	margin: 0 5px 0 0;
+	padding: 12px;
+	width: 175px;
+	text-decoration: none;
+}
+
+.drop-content {
+	background-color: #FAFAFA;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	display: none;
+	margin: 0px;
+	position: absolute;
+	width: 175px;
+	z-index: 1;
+}
+
+.drop-content a {
+	background-color: #FAFAFA;
+	color: #000;
+	display: inline-block;
+	padding: 8px 0 8px 5px;
+	width: 175px;
+	text-decoration: none; 
+}
+
+.drop-content a:hover {
+	background-color: #EEE;
+	color: #000;
+}
+
+.dropdown:hover .drop-content {
+	display: block;
+}
+
+#sub-route {
+	background-color: #FAFAFA;
+	color: #000;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+		top: 0px;
+		left: 103%;
+	width: 195px;
+	z-index: 1;
+}
+
+#sub-route a {
+	background-color: #eee;
+	color: #000;
+	display: inline-block;
+	padding: 8px 0 8px 20px;
+	width: 175px;
+	text-decoration: none;
+}
+
+#sub-route a:hover {
+	background-color: #A0A0A0;
+	color: #FFF;
+}
+
+#sub-wave {
+	background-color: #FAFAFA;
+	color: #000;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+		top: 34px;
+		left: 103%;
+	width: 195px;
+	z-index: 1;
+}
+
+#sub-wave a {
+	background-color: #eee;
+	color: #000;
+	display: inline-block;
+	padding: 8px 0 8px 20px;
+	width: 175px;
+	text-decoration: none;
+}
+
+#sub-wave a:hover {
+	background-color: #A0A0A0;
+	color: #FFF;
+}
+
+#sub-task {
+	background-color: #FAFAFA;
+	color: #000;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+		top: 68px;
+		left: 103%;
+	width: 195px;
+	z-index: 1;
+}
+
+#sub-task a {
+	background-color: #eee;
+	color: #000;
+	display: inline-block;
+	padding: 8px 0 8px 20px;
+	width: 175px;
+	text-decoration: none;
+}
+
+#sub-task a:hover {
+	background-color: #A0A0A0;
+	color: #FFF;
+}
+
+/*==============================================================================================================*/
+
+
+/*============================================3.0 Section Styles================================================*/
+
+/*==============================================================================================================
+						3.1 Hero Styles
+================================================================================================================*/
+
+
+#hero {
+	background: #1C86EE;
+	color: #333;
+	font-family: sans-serif;
+	font-weight: 300;
+	padding-top: 50px;
+	text-align: center;
+	width: 100%;
+}
+
+#hero h1 {
+	font-size: 72px;
+	font-weight: 300;
+	padding: 20px 0;
+}
+
+#hero p {
+	font-size: 24px;
+	padding: 10px 0 20px;
+}
+
+
+/*==============================================================================================================*/
+
+
+/*==============================================================================================================
+					      3.2 Content Table Styles
+================================================================================================================*/
+
+#contentList {
+	
+	padding: 10px;
+	width: 100%;
+}
+
+#contentList h2 {
+	font-size: 48px;
+	font-weight: 300;
+	padding: 20px;
+}
+
+#contentList ol {
+	font-size: 28px;
+	margin-left: 20px;
+}
+
+#contentList li {
+	padding: 5px ;
+}
+
+#contentList a {
+	color: #000;
+	font-weight: 300;
+	text-decoration: none;
+}
+
+
+/*==============================================================================================================*/
+
+
+
+/*==============================================================================================================
+						3.3 Show Me Styles
+================================================================================================================*/
+
+
+#showMe {
+	width: 100%;
+}
+
+.head {
+	background-color: #FAFAFA;
+	color: #333;
+	clear: right;
+	font-size: 48px;
+	font-weight: 300;
+	padding: 20px;
+	text-align: center;
+}
+
+.head h1 {
+	font-weight: 300;
+}
+
+.body {
+	background-color: #FFF;
+	clear: both;
+	color: #111;
+	font-size: 20px;
+	font-weight: 300;
+	padding: 30px 20px 30px;
+}
+
+.example {
+	background-color: #FAFAFA;
+	border-left: solid 5px #999;
+	box-shadow: none;
+	margin: 30px 0;
+	margin-left: 25px;
+	padding-left: 10px;
+	padding-top: 5px;
+	width: 75%;
+}
+
+.photo-sizing {
+	width: 99%;
+}
+
+#Ex_1 #Ex_2 #Ex_3 #Ex_4 #Ex_5 #Ex_6 #Ex_7 {
+	box-shadow: none;
+	transition: none;
+	margin-left: 25px;
+}
+
+
+
+.focus {
+	background: #F0F8FF;
+	border: solid 2px #1C86EE;
+	padding: 15px 20px;
+}
+
+.italy {
+	font-style: italic;
+}
+
+.return {
+	background: #eee;
+	color: #777;
+	display: block;
+	float: right;
+	font-weight: 300;
+	margin:5px 0;
+	padding: 10px 2px;
+	text-align: center;
+	text-decoration: none;
+	width: 145px;
+}
+
+.return:hover {
+	opacity: 0.7;
+}
+
+.float-body {
+	width: 100%;
+}
+
+.slideContain {
+	max-width: 700px;
+	position: relative;
+	margin: auto;
+	z-index: 0;
+}
+
+.sheet-info {
+	border-radius: 3px;
+	display: none;
+	height: auto;
+	margin: auto;
+	padding: 10px 10px;
+	width: 480px;
+}
+
+.sheet-info h3 {
+	background-color: #eee;
+	border-bottom: solid 1px #999;
+	font-size: 48px;
+	font-weight: 300;
+	margin: auto;
+	padding: 5px 0;
+	text-align: center;
+	width: auto;
+}
+
+.sheet-info img {
+	padding: 20px 50px;
+	width: 80%;
+}
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: #999;
+	font-weight: bold;
+	font-size: 18px;
+	border-radius: 0 3px 3px 0;
+	transition: 0.6s ease;
+	text-decoration: none;
+}
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fig-text {
+	font-size: 24px;
+	margin-top: -5px;
+	padding: 3px 0 0 3px;
+	width: auto;
+}
+
+#door, #wave, #store {
+	border: solid 1px #000;
+	float: left;
+	text-align: center;
+}
+
+#door, #wave, #store {
+	font-size: 24px;
+	height: 30px;
+	text-align: center;
+	width: 85.5px;
+}
+
+#door {
+	margin: 10px 0px 10px 56px;
+	padding: 8px 3px;
+}
+
+#wave, #store {
+	border-left: none;
+	margin: 10px 0;
+	padding: 8px 3px;
+}
+
+#boxes {
+	clear: left;
+}
+
+#boxes-active, #boxes-task, #boxes-release, #boxes-close {
+	border-top: solid 1px #000;
+	border-bottom: solid 1px #000;
+	float: left;
+	height: 30px;
+	margin: 10px 0;
+	padding: 8px 3px;
+	width: 169px;
+}
+
+#boxes-invoice {
+	border-top: solid 1px #000;
+	border-right: solid 1px #000;
+	border-bottom: solid 1px #000;
+	float: left;
+	height: 30px;
+	margin: 10px 0;
+	padding: 8px 3px;
+	width: 172px;
+}
+
+#boxes-active div, #boxes-task div, #boxes-release div, #boxes-close div, #boxes-invoice div {
+	border: solid 2px #000;
+	box-shadow: 2px 2px 1px 1px rgb(0, 0, 0);
+	height: 20px;
+	margin: auto;
+	position: relative;
+	width: 20px;
+}
+
+#boxes-active div div, #boxes-task div div, #boxes-release div div, #boxes-close div div, #boxes-invoice div div {
+	background-color: #000;
+	border: solid 1px #222;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	color: #FFF;
+	height: auto;
+	margin-left: -120px;
+	padding: 10px;
+	position: absolute;
+		top: 36px;
+		left: 50%;
+	text-align: left;
+	width: 240px;
+	visibility: hidden;
+	z-index: 1;
+}
+
+
+/*==============================================================================================================*/
+
+
+/*==============================================================================================================
+						3.4 Detail Styles
+================================================================================================================*/
+
+#details {
+	width: 100%;
+}
+
+.subHead h2 {
+	font-weight: 300;
+	padding: 12px 0;
+}
+
+.subHead p {
+	padding: 0 0 0 15px;
+}
+
+.note {
+	background: #FFC1C1;
+	border: solid 2px #AD0606;
+	margin: 15px 60px;
+	padding: 5px;
+}
+
+.ponder {
+	background: #FAFAD2;
+	border: solid 2px #EEEE00;
+	margin: 15px 60px;
+	padding: 8px;
+}
+
+.waveContainer {
+	margin: 0 20px;
+	padding: 10px;
+	width: 1200px;
+}
+
+.waveContainer table {
+	border-collapse: collapse;
+}
+
+#waveHeader {
+	background-color: orange;
+	padding: 5px;
+	padding-left: 20px;
+	width: 1175px;
+}
+
+.col-A {
+	border: solid 1px #333;
+	padding: 2px; 
+	width: 50px;
+}
+
+.col-B {
+	border: solid 1px #333;
+	padding: 2px;
+	text-align: center; 
+	width: 25px;
+}
+
+.col-C {
+	border: solid 1px #333;
+	padding: 2px;
+	text-align: center; 
+	width: 75px;
+}
+
+.col-D {
+	border: solid 1px #333;
+	padding: 2px;
+	text-align: center; 
+	width: 55px;
+}
+
+.col-E {
+	border: solid 1px #333;
+	padding: 2px;
+	text-align: center; 
+	width: 55px;
+}
+
+.col-F {
+	border: solid 1px #333;
+	padding: 2px;
+	text-align: center; 
+	width: 20px;
+}
+
+.col-G {
+	border: solid 1px #333;
+	padding: 2px;
+	text-align: center; 
+	width: 40px;
+}
+
+.col-H {
+	border: solid 1px #333;
+	padding: 2px;
+	text-align: center; 
+	width: 125px;
+}
+
+.col-Text {
+	background-color: #666;
+	color: #FFF;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.col-Width {
+	padding-top: 20px;
+}
+
+.hideMe {
+	display: ;
+	visibility: visible;
+	transition: 1s;
+	-webkit-transition: 1s;
+}
+
+#btnHide {
+	background-color: #1C86EE;
+	border: none;
+	border-radius: 3px;
+	color: #FFF;
+	font-size: 14px;
+	margin: 5px 0;
+	padding: 5px;
+	width: 75px;
+}
+
+.boxQ {
+	font-family: "Wingdings";
+}
+
+.finalFontCol {
+	font-size: 24px;
+}
+
+.finalFontBox {
+	font-size: 32px;
+}
+
+
+/*==============================================================================================================*/
+
+
+/*==============================================================================================================
+						3.5 Non-Desc Styles
+================================================================================================================*/
+
+.subHead ul, .subHead ol {
+	margin-bottom: 10px;
+	margin-left: 30px; 
+	margin-top: 10px;
+}
+
+.subHead li {
+	padding: 5px 0;
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 300px;
+	top: 100%;
+	left: 50%;
+	margin-left: -150px;
+	background-color: #000;
+	color: #FFF;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 3px;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+	position: absolute;
+	z-index: 1;
+}
+
+.tooltip .tooltiptext ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.tooltip .tooltiptext li {
+	display: inline-block;
+	margin: 0px;
+}
+
+.tooltip .tooltiptext a {
+	color: #FFF;
+	display: inline-block;
+	text-align: center;
+}
+
+.tooltip .tooltiptext a:hover {
+	color: #FFF;
+	background-color: #E84545;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent #000 transparent;
+}
+
+.diff {
+	color: #1C86EE;
+}
+
+
+
+/*==============================================================================================================*/
+
+
+/*==============================================================================================================
+						3.6 Exception Styles
+================================================================================================================*/
+
+.example li {
+	padding: 5px 0;
+}
+
+
+/*==============================================================================================================*/
+
+
+/*==============================================================================================================
+						3.7 practice Styles
+================================================================================================================*/
+
+#practice {
+	font-family: courier;
+	font-weight: 100;
+}
+
+#practice h2 {
+	font-family: sans-serif;
+	font-size: 36px;
+	font-weight: 300;
+	margin: 0 0 0 25px;
+	width: auto;
+}
+
+#practice p {
+	color: #111;
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	margin-left: 25px;
+	padding: 30px 20px 30px;
+	width: auto;
+}
+
+#error {
+	background-color: #FFF;
+	color: #FFF;
+	padding: 0 5px 0;
+}
+
+#route-practice {
+	background-color: #000;
+	border: solid 3px #ddd;
+	color: rgb(0, 255, 0);
+	margin: auto;
+	margin-bottom: 60px;
+	padding: 20px 0px;
+	width: 1300px;
+}
+
+#route-practice form label {
+	display: inline-block;
+	font-size: 24px;
+	padding: 8px 15px;
+	width: 150px;
+}
+
+#route-practice form input {
+	background-color: #000;
+	border: none;
+	border-bottom: solid 1px #FFF;
+	color: #FFF;
+	display: inline-block;
+	font-family: courier;
+	font-size: 24px;
+	height: 32px;
+}
+
+#route-practice form table {
+	border-collapse: collapse;
+}
+
+#route-practice form table th {
+	color: rgb(0, 255, 255);
+	font-size: 24px;
+	font-weight: 300;
+	padding-left: 15px;
+	text-align: left;
+}
+
+.act-option {
+	color: rgb(255, 255, 255);
+	font-size: 24px;
+	padding-left: 15px;
+}
+
+.practice-submit {
+	background-color: #000;
+	border: none;
+	color: rgb(0, 255, 255);
+	font-family: courier;
+	font-size: 24px;
+	font-weight: 300;
+	margin: 8px 15px;
+	padding: 0;
+}
+
+/*==========================================close route page styles==========================================*/
+
+#clsRtBody tr td {
+	font-size: 24px;
+	width: 240px;
+}
+
+#seal {
+	width: 200px;
+}
+
+#sealNumber {
+	width: 200px;
+}
+
+/*=======================================end close route page styles==========================================*/
+
+
+/*==========================================create route page styles==========================================*/
+
+#crtRtBody tr td {
+	font-size: 24px;
+	padding-left: 5px; 
+	width: 240px;
+}
+
+#crtRtBody .rowTop td {
+	padding: 30px 0 0 5px;
+}
+
+#crtRtBody #rtType {
+	width: 30px;
+}
+
+#crtRtBody #shVia {
+	text-transform: uppercase;
+	width: 90px;
+}
+
+#crtRtBody #crtDock, #crtDoor {
+	width: 90px;
+}
+
+#crtRtBody #rtCrite {
+	text-transform: uppercase;
+	width: 180px;
+}
+
+#crtRtBody #rtBOL {
+	width: 30px;
+}
+
+#crtRtBody #typeMsg, #viaMsg, #genMsg, #bolMsg {
+	color: #FFF;
+}
+
+/*======================================end create route page styles==========================================*/
+
+/*===========================================open route page styles===========================================*/
+
+#route {
+	width: 160px;
+}
+
+#option {
+	margin-left: 10px;
+	text-align: center;
+	width: 50px;
+}
+
+#ndoor, #trailer {
+	margin-right: 20px;
+	width: 150px;
+}
+
+#dock, #shipvia {
+	width: 150px;
+}
+
+/*=======================================end open route page styles===========================================*/
+
+
+/*=========================================build waves page styles============================================*/
+
+#route-practice form h2 {
+    color: #FFF;
+    font-size: 24px;
+    font-family: courier;
+    font-weight: 300;
+    margin: 0 30% 50px;
+}
+
+#route-practice form h3 {
+    color: #FFF;
+    font-family: courier;
+    font-size: 24px;
+    font-weight: 200;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+#route-practice #wvb_Practice .wvb_Options {
+    color: rgb(0, 255, 255);
+    font-family: courier;
+    font-size: 24px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+#route-practice #wvb_Practice #smTbl {
+    width: 900px;
+}
+
+#route-practice #wvb_Practice .wvb_Head {
+    color: #FFF;
+    font-family: courier;
+    font-size: 24px;
+    padding-left: 25px;
+}
+
+#route-practice #wvb_Practice .Status {
+    width: 100px;
+}
+
+#route-practice #wvb_Practice .Comment {
+    width: 300px;
+}
+
+#route-practice #wvb_Practice .wvb_Body {
+    color: rgb(0, 255, 0);
+    font-family: courier;
+    font-size: 24px;
+    font-weight: 200;
+    padding-left: 25px;
+}
+
+#rule50, #rule60, #rule70, #rule80, #rule90 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#route-practice #wvb_Practice table {
+    width: 100%;
+}
+
+#route-practice #wvb_Practice table #wvb_Main {
+    font-size: 24px;
+    font-weight: 300;
+    padding: 0 0 0 25px;
+    width: 480px;
+}
+
+#route-practice #wvb_Practice table #wvb_Small input {
+    margin: 0 20px;
+    text-align: center;
+    width: 30px;
+}
+
+#route-practice #wvb_Practice table #wvb_Med input {
+    margin: 0 40px 0 20px;
+    width: 50px;
+}
+
+#route-practice #wvb_Practice table #wvb_Lg input {
+    width: 120px;
+}
+
+#route-practice #wvb_Practice table #wvb_Submit button {
+    background-color: #000;
+    border: none;
+    color: rgb(0, 255, 255);
+    font-size: 24px;
+    font-family: courier;
+    margin-top: 35px;
+    padding-left: 25px;
+    text-align: left;
+    width: 210px;
+}
+
+#route-practice #wvb_Practice table #generate {
+    font-family: courier;
+    font-size: 24px;
+}
+
+#route-practice #wvb_Practice table .company {
+    padding-left: 10px;
+    width: 100px;
+}
+
+#route-practice #wvb_Practice table .division {
+    width: 100px;
+}
+
+#route-practice #wvb_Practice table .day {
+    width: 75px;
+}
+
+#route-practice #wvb_Practice table .shift {
+    width: 70px;
+}
+
+#route-practice #wvb_Practice table .rule {
+    width: 90px;
+}
+
+#route-practice #wvb_Practice table .waveDesc {
+    width: 200px;
+}
+
+#route-practice #wvb_Practice table .smInput {
+    margin-left: 10px;
+    width: 30px;
+}
+
+#route-practice #wvb_Practice table .mdInput {
+    margin-left: 10px;
+    width: 45px;
+}
+
+#route-practice #wvb_Practice table .mdsInput {
+    width: 90px;
+}
+
+#route-practice #wvb_Practice table .mdlgInput {
+    width: 135px;
+}
+
+#route-practice #wvb_Practice table .vlgInput {
+    width: 99%;
+}
+
+
+/*=======================================end build waves page styles===========================================*/
+
+
+/*==============================================================================================================*/
+
+
+/*==============================================================================================================
+						4.0 Footer Styles
+================================================================================================================*/
+
+.footer {
+	background-color: #F0F8FF;
+	clear: both;
+	padding: 40px 0;
+	text-align: center;
+	width: 100%;
+}
+
+
+/*==============================================================================================================*/

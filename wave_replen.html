@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wave Replenishment Tasks | Big 5 Documentation</title>
+<link href="waver.css" rel="stylesheet" type="text/css">
+<script src="JS/functions.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+
+	<nav class="mainNav">
+
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li class="dropdown"><button>WAVING</button>
+
+			<div class="drop-content">
+
+			<a href="#" onmouseover="openRoute('sub-route', 'sub-wave', 'sub-task')">Routing</a>
+			<div id="sub-route">
+			<a href="open_route.html">Open Routes</a>
+			<a href="close_route.html">Close Routes</a>
+			<a href="create_route.html">Create Routes</a>
+			</div>
+
+			<a href="#" onmouseover="openWave('sub-wave', 'sub-route', 'sub-task')">Waving</a>
+			<div id="sub-wave">
+			<a href="build_waves.html">Build Waves</a>
+			<a href="wavesheet.html">Wave Sheet</a>
+			<a href="#">Shortages</a>
+			<a href="#">Forceloads</a>
+			<a href="invoice.html">Invoicing</a>
+			<a href="reports.html">WM Reports</a>
+			</div>
+
+			<a href="#" onmouseover="openTask('sub-task', 'sub-wave')">Tasking</a>
+			<div id="sub-task">
+			<a href="task_release.html">Releasing Tasks</a>
+			<a href="build_tasks.html">Build Tasks</a>
+			<a href="wave_replen.html">Wave Replen Rpt</a>
+			</div>
+
+			</div>
+
+			</li>
+
+			<li class="dropdown" onmouseover="resetSub('sub-route', 'sub-wave', 'sub-task')"><button>PUT AWAY</button>
+
+			<div class="drop-content"><a href="a2a.html">Active to Active</a></div></li>
+
+			<li class="dropdown"><button>APPOINTMENTS</button>
+
+			<div class="drop-content"></div></li>
+
+		</ul>
+	
+	</nav><!-- end of mainNav class -->
+
+	<section id="hero">
+
+		<h1>Wave Replenishment Tasks</h1>
+		<p>&#40;Documentation for the Wave Replenishment Tasks report&#41;</p>
+
+	</section><!-- end of hero id -->
+
+	<section id="contentList">
+
+		<h2>CONTENT&#58;</h2>
+
+		<ol type="1">
+			<li><a href="#showMe">What is the report showing me&#63;</a></li>
+			<li><a href="#details">Report Details</a></li>
+			<ol type="a">
+				<li>Task ID</li>
+				<li>SKU</li>
+				<li>From &amp; To</li>
+				<li>Priority</li>
+				<li>BOH</li>
+				<li>TBP</li>
+				<li>TBF</li>
+				<li>MAX</li>
+			</ol>
+			<li><a href="#nonDesc">Non&#45;Described Report Items</a></li>
+			<ol type="a">
+				<li>Color Highlighted Tasks</li>
+				<li>Asterisk &#40;&#42;&#41;</li>
+				<li>Status &#40;00&#44; 08&#44; 10&#44; 15&#44; 20&#41;</li>
+				<li>User</li>
+			</ol>
+			<li><a href="#exceptions">Exceptions</a></li>
+			<ol type="a">
+				<li>Broken Tasks</li>
+			</ol>
+		</ol>
+	
+	</section><!-- end of contentList id -->
+
+	<section id="showMe">
+
+		<div class="head">
+
+			<h1>What is this Report Showing Me&#63;</h1>
+
+		</div><!-- end of head class (showMe) -->
+
+		<div class="body">
+
+			<p class="focus"><strong>FOCUS&#58;</strong>The Wave Replenishment Tasks report displays all the tasks that have been built by the system during the wave building process&#44;
+			 and during the lean time creation processes&#46;</p>
+
+			<div class="example" id="Ex_1" onmouseover="hoverIn('Ex_1')" onmouseout="hoverOut('Ex_1')">
+
+				<p>The tasks on the Wave Replenishment report are grouped by date and then the wave number&#58;</p><br>
+				<img src="images/wrt_Wave.png" alt="Wave Replen Waves highlighted">
+
+			</div><!-- end of example class -->
+
+
+			<div class="example" id="Ex_2" onmouseover="hoverIn('Ex_2')" onmouseout="hoverOut('Ex_2')">
+
+				<p>The letters that are displayed next to the wave number are the <span class="italy">aisles</span> that the task is ultimately destined to go&#44;
+			 	and the number represents the <span class="italy">amount</span> of tasks there are for the aisle on <span class="italy">that</span> wave&#58;</p><br>
+				<img src="images/wrt_Aisle.png" alt="Wave Replen Aisles highlighted">
+
+			</div><!-- end of example class -->
+		
+			<p>There is a lot of detail that is displayed on this report&#44; which will be explained further&#46; But&#44; the general purpose of the Wave Replenishment Tasks report is to provide the end user with a view of all the Forklift &amp; Stock tasks that are available in the system&#46; 
+			The specific purpose of this report is to help the Waver guide the workflow of Forklift&#47;Stock to where it is needed&#46;</p>		
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+		</div><!-- end of body class -->
+
+
+	</section><!-- end of showMe id -->
+
+	<section id="details">
+
+		<div class="head">
+
+			<h1>Report Details</h1>
+	
+		</div><!-- end of head class (details) -->
+
+		<div class="body">
+
+			<p class="focus"><strong>FOCUS&#58</strong> The more detailed parts of the Wave Replenishment Tasks report will be explored within this section of the guide</p>
+
+			<div class="example" id="Ex_3" onmouseover="hoverIn('Ex_3')" onmouseout="hoverOut('Ex_3')">
+
+				<img src="images/wrt_Header.png" alt="Report Headers highlighted">
+
+			</div><!-- end of example class -->
+
+			<div class="subHead">
+
+				<h2>Task ID</h2>
+
+				<p>The Task ID or Task Number is singular in that it deals with only one SKU at a time. 
+				In the screen shot above, Task 0957107727 only deals with SKU 04524849. 
+				Thus, this Task Number is a singular replenishment for SKU 04524849.</p>
+
+			<div class="note"> 
+				<h5>NOTE&#58;</h5>
+				<span class="italy">Although Tasks are singular replenishments for a particular SKU, there can be multiple replenishments against a single SKU on multiple waves. 
+				This will be explained later in the guide&#46;</span>
+
+			</div><!-- end of note class -->
+
+				<h2>SKU</h2>
+
+				<p>The SKU, as explained in the Task ID section, is the SKU that is being replenished&#46;</p>
+
+				<h2>From &amp; To</h2>
+
+				<p>The &ldquo;From&rdquo; is the reserve location where the pallet of merchandise resides&#46; 
+				A forklift driver will be directed to this location &#40;via the task&#41; and then take the pallet &ldquo;To&rdquo; the active picking location&#46; 
+				The active picking location is where the SKU is physically being picked&#46;</p>
+
+				<h2>Priority</h2>
+
+				<ol type="i">
+
+					<li>The priority is something that the Waver can manipulate to move up or down the priority chain</li>
+					<li>All lean time wave replenishment tasks are built at a priority level of 60</li>
+					<li>Lean time tasks that are built after the waving process are built at a priority level of 70</li>
+					<li>A Priority level of 65 is tasks that are coming from the receiving dock to the pick/drop zones &#40;<span class="italy">See note below</span>&#41;</li>
+					<li>A priority level of 40 is when the replenishment needs to happen before the wave is reached by the order fillers &#40;<span class="italy">See note below</span>&#41;</li>
+					<li>A priority level 50 is when the replenishment needs to occur within the wave &#40;<span class="italy">See note below</span>&#41;</li>
+					<li>When the balance on hand &#40;BOH&#41; is below the minimum inventory threshold the system will bump the priority of the task to a level 35</li>
+					<li>Any other priority levels outside of these defined priorities would have been manipulated by the Waver</li>
+
+				</ol>
+
+				<div class="note">
+
+					<h5>NOTE&#58;</h5>
+
+					<p><span class="italy">Drop Zones</span> &ndash; Drop Zones are used in the C&#44; D&#44; and Q modules where stock employees replenish on foot rather than by forklift &ndash; This is further explained in the &ldquo;Status&rdquo; section</p><br>
+					<p><span class="italy">Priority 40</span> &ndash; The active location has zero inventory by the time the order filler reaches that wave</p><br>
+					<p><span class="italy">Priority 50</span> &ndash; The inventory within the active location will not satisfy what is to be pulled on the wave&#59; however&#44; the inventory is not at zero</p>
+
+
+				</div><!-- end of note class -->
+
+				<h2>BOH</h2>
+
+				<p>The &ldquo;BOH&rdquo; or Balance On Hand column shows how much inventory exists in the active picking location&#46;</p>
+
+				<h2>TBP</h2>
+
+				<p>The &ldquo;TBP&rdquo; or To Be Picked column shows how much any given SKU will be picked throughout the wave schedule&#46;</p>
+
+				<h2>TBF</h2>
+
+				<p>The &ldquo;TBF&rdquo; or To Be Filled column shows how much will be replenished into the active picking location for <span class="italy">that</span> particular task&#46;</p>
+
+				<h2>MAX</h2>
+
+				<p>The Max column displays the maximum amount of inventory the actual picking location can hold&#46;</p>
+
+				<div class="ponder">
+
+					<p><strong>QUESTION</strong>&ndash; What happens if a replenishment task&#39;s to be filled amount exceeds the maximum of a pick location&#63;</p><br>
+					<p>The next section will go over some key indicators that help the user of the Wave Replenishment Tasks report make educated decisions</p>
+
+				</div><!-- end of ponder class -->
+
+			</div><!-- end of subHead class -->
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+		</div><!-- end of body class -->
+
+	</section><!-- end of details id -->
+
+	<section id="nonDesc">
+
+		<div class="head">
+
+			<h1>Non&ndash;Described Report Items</h1>
+
+		</div><!-- end of head class -->
+
+		<div class="body">
+
+			<h2>Color Highlighted Tasks</h2>
+
+			<div class="example" id="Ex_4" onmouseover="hoverIn('Ex_4')" onmouseout="hoverOut('Ex_4')">
+
+				<img src="images/wrt_Green.png" alt="Green Highlighted Tasks" height="40" width="960">
+
+			</div><!-- end of example class -->
+
+			<div class="subHead">
+
+				<p>Green highlighted tasks numbers have the following characteristics&#58;</p>
+				
+				<ul>
+					<li>The BOH is <span class="italy">less</span> than the TBP</li>
+					<li>The priority is at a level 60 &#40;<span class="italy">meaning the system has not bumped up the task yet</span>&#41;</li>
+				</ul>
+
+				<div class="note">
+
+					<h5>NOTE&#58;</h5>
+
+					<p>Since the BOH is less than the TBP this would signify that the pick locations <span class="italy">will</span> shortpick at some point&#46; 
+					The green highlight should also signify to the Waver that this task can be bumped to a priority 30&#46;</p>
+
+				</div>
+
+			</div><!-- end of subHead class -->
+
+			<div class="example" id="Ex_5" onmouseover="hoverIn('Ex_5')" onmouseout="hoverOut('Ex_5')">
+
+				<img src="images/wrt_Yellow.png" alt="Yellow Highlighted Tasks" height="40" width="960">
+
+			</div><!-- end of example class -->
+
+			<div class="subHead">
+
+				<p>Yellow highlighted tasks numbers have the following characteristics&#58;</p>
+				
+				<ul>
+					<li>The BOH + TBF are greater than the MAX of the location</li>
+					<li>This signifies that the task currently &ldquo;does not fit&rdquo; or would &ldquo;over fill&rdquo; the location and should not be released</li>
+				</ul>
+
+
+			</div><!-- end of subHead class -->
+
+			<div class="example" id="Ex_6" onmouseover="hoverIn('Ex_6')" onmouseout="hoverOut('Ex_6')">
+
+				<img src="images/wrt_Red.png" alt="Red Highlighted Tasks" height="40" width="960">
+
+			</div><!-- end of example class -->
+
+			<div class="subHead">
+
+				<p>Red highlighted tasks signify one thing&#58;</p>
+				
+				<ul>
+					<li>The TBF is greater than the Max of the location &ndash; meaning this task <span class="italy">will never fit in the location</span></li>
+				</ul>
+
+				<div class="note">
+			
+					<h5>NOTE&#58;</h5>				
+
+					<p>This can be fixed by updated the Min&#47;Max of the location &#40;<span class="italy">This is true for all locations except for the C &amp; D modules</span>&#41;</p>
+
+				</div>
+
+
+			</div><!-- end of subHead class for Color Highlighted Tasks -->
+
+			<h2>Asterisk &#40;&#42;&#41</h2>
+
+			<div class="example" id="Ex_7" onmouseover="hoverIn('Ex_7')" onmouseout="hoverOut('Ex_7')">
+
+				<img src="images/wrt_Asterisk.png" alt="Asterisk labeled task" height="60" width="915">
+
+			</div><!-- end of example class -->
+
+			<div class="subHead">
+
+				<p>When an asterisk &#40;*&#41; appears next to a task number it signifies that there are multiple tasks created for that SKU&#40;s&#41;&#46;</p><br>
+				<p>Caution should be used when an asterisk is present for the following reason&#40;s&#41;&#58;</p>
+
+				<ol type="1">
+					<li>Too many tasks could be opened for the active location&#46; 
+					This can result in extra work for the forklift department by having to consume the pallets out of the active location&#44; 
+					and then take the extra pallets back to a reserve location&#46;</li>
+					<li>Releasing newer tasks ahead of older tasks&#46; 
+					This can occur when working with the deeper pages of the Wave Replenishment Report&#46; 
+					It is important to be aware of where one is at &#40;in terms of pages&#41; in the report&#46; 
+					If a task has an asterisk&#44; make sure to work from the start of the report &#40;page 1&#41; when looking for tasks to open for that particular SKU&#46;</li>
+				</ol>
+
+			</div><!-- end of subHead class for Asterisk -->
+
+			<h2>Status &#40;00&#44; 08&#44; 10&#44; 15&#44; 20&#41;</h2>
+
+			<div class="subHead">
+
+				<p><strong>00</strong> &ndash; This status represents that the task is &ldquo;released&rdquo; and available to be worked by a forklift driver or stock clerk&#46;</p><br>
+
+				<p><strong>08</strong> &ndash; This status represents that the task is in the &ldquo;Drop Zone&rdquo;&#46; This is only the case with the C&#44; D&#44; &amp; Q modules&#46;</p><br>
+
+				<p>To Further explain what the &ldquo;Drop Zone&rdquo; is&#44; it is important to point out a few details&#58;</p>
+	
+				<ul>
+					<li>All &ldquo;external&rdquo; reserve locations exist in the following area locations &ndash; N&#44; O&#44; 
+
+						<div class="tooltip"><span class="diff italy">P</span>
+						<p class="tooltiptext">PC&#44; D&#44; G&#44; H&#44; have active locations as well&#44; but these picking locations have reserves above them&#46;</p></div>&#44; 
+
+						<div class="tooltip"><span class="diff italy">Q</span>
+						<p class="tooltiptext">QT &amp; QU have active locations&#44; as well as reserves above them&#46;</p></div>&#44; 
+
+					R&#44; S&#44; 
+
+						<div class="tooltip"><span class="diff italy">T</span>
+
+						<p class="tooltiptext">TI is an active picking location within the T reserves</p></div>&#44; 
+
+					&amp; U</li>
+
+					<li>Forklift drivers take pallets from the receiving dock to these reserve locations&#44; 
+					as well as take pallets from these same reserve locations and put them into active picking locations 
+					&#40;<span class="italy">such as BA&ndash;M&#44; E&ndash;L&#44; PC&ndash;D&#44; PG&ndash;H&#44; PK&ndash;M&#44; QT&#44;  &amp; QU</span>&#41;</li>
+
+					<li>C&#44; D&#44; &amp; Q have additional rack space built on the outside of the module&#44; 
+					which prevents forklift drivers from putting the pallets directly into the active location&#40;s&#41;&#46; The reason&#63; The C&#44; D&#44; &amp; Q modules are &ldquo;case flow&rdquo; modules&#44; 
+					meaning the active locations are filled by placing cases into the location by hand</li>
+
+					<li>Thus&#44; when a forklift driver places a pallet into any of these rack spaces outside of the 
+					C&#44; D&#44; &amp; Q modules the status changes to &ldquo;08&rdquo; because it is in the &ldquo;Drop Zone&rdquo;</li>
+
+					<li>This then becomes the responsibility of a stock clerk to finish the task into the active location</li>
+				</ul>
+
+				<p><strong>10</strong> &ndash; This status represents an instance when a forklift driver or stock clerk has &ldquo;picked up&rdquo; an open task&#46;</p><br>
+
+				<p><strong>15</strong> &ndash; This status represents that a task is &ldquo;held&rdquo; and is not able to be worked by a forklift driver or stock clerk until it is released
+				by the Waver or by the System&#46;</p><br>
+
+				<p><strong>20</strong> &ndash; This status represents that a forklift driver or stock clerk is in the middle of executing the task&#46;</p>
+
+				<div class="note">
+			
+					<h5>NOTE&#58;</h5>				
+
+					<p>A Status 20&#44; essentially&#44; is the last status one will see a task in with this report&#44; unless it is going to the &ldquo;drop zone&rdquo;&#46; 
+					Once a driver or clerk finishes executing the task&#44; the task is finished and will drop from the report</p>
+
+				</div><!-- end of Note class for Status -->
+
+			</div><!-- end of subHead class for Status -->
+
+			<h2>User</h2>
+
+			<div class="example" id="Ex_8" onmouseover="hoverIn('Ex_8')" onmouseout="hoverOut('Ex_8')">
+
+				<img src="images/wrt_User.png" alt="User Callout image" height="33" width="915">
+
+			</div><!-- end of example Class for User-->
+
+			<div class="subHead">
+
+				<p>The initials that are always to the right of the priority number represent a user&#46; 
+				These can be the initials of who created the task &#40;usually the Waver&#41;&#44; a forklift driver or stock clerk&#44; and lastly an order-filler&#46; 
+				Whoever last modified the SKU&#44; his or her initials will be displayed&#44; or whoever is currently executing the task&#46;</p><br>
+
+			</div><!-- end of subHead class for User -->
+
+			<h2>BOH Underlined</h2>
+
+			<div class="example" id="Ex_9" onmouseover="hoverIn('Ex_9')" onmouseout="hoverOut('Ex_9')">
+
+				<img src="images/wrt_Underline.png" alt="Underline Callout image" height="33" width="915">
+
+			</div><!-- end of example Class for User-->
+
+			<div class="subHead">
+
+				<p>The &lsquo;BOH&rsquo; is underlined when the following is true&#58; <code>TBP > BOH</code>&#46;
+				 Anytime the &lsquo;BOH&rsquo; is less than the &lsquo;TBP&rsquo;
+				 certainty of a short pick is present&#46;</p><br>
+
+			</div><!-- end of subHead class for User -->
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+		</div><!-- end of body class for nonDesc section-->
+
+	</section><!-- end of nonDesc id section -->
+
+	<section id="exceptions">
+
+		<div class="head">
+
+			<h1>Exceptions</h1>
+
+		</div><!-- end of head class for exceptions -->
+
+		<div class="body">
+
+			<p class="focus">This sections describes a problem that is unique to the C, D modules &#40;most predominately the D module&#41;</p><br>
+
+			<h2>Broken Tasks</h2>
+
+			<div class="subHead">
+
+				<p>A broken task has the following characteristics&#58;</p>
+
+				<ul>
+					<li>The TBP is greater than the BOH&#44; yet a single pallet quantity will satisfy the replenishment need 
+					&#40;<span class="italy">Basically&#44; One task for the entire waving schedule</span>&#41;</li>
+
+					<li>The entire pallet quantity will not fit into the active location&#44; only a portion will&#46; 
+					This is due to the fact that most of the locations in the C &amp; D module are replenished by hand&#44; and only have space large enough to hold a certain amount of cases&#46; 
+					Thus&#44; if an entire pallet quantity exceeds that amount of cases than location can hold the remainder has to be put back into reserve 
+					&#40;<span class="italy">These reserves exist internally in both the C &amp; D modules</span>&#41;</li>
+
+					<li>The remainder that does not fit in the active location are consumed out of that location and located to an internal reserve within the module</li>
+
+				</ul>
+
+			</div><!-- end of subHead class for exceptions -->
+
+			<div class="example">
+
+				<h5>To illustrate a broken task consider the following scenario&#58;</h5>
+
+				<ul>
+					<li>150 units need to be picked through the waving schedule for a single SKU in the D module</li>
+
+					<li>Only 50 units are actually in the active location&#46; The active location can only hold a maximum of 100 units</li>
+
+					<li>The system generates one task with a pallet quantity of 200 units</li>
+
+					<li>The task is executed&#59; however&#44; only 50 units are put in the location and the remaining 150 units of the pallet are put to an internal reserve location</li>
+				</ul>
+
+			</div><!-- end of example for exceptions section -->
+
+			<div class="ponder">
+
+				<p><strong>QUESTION</strong> &ndash; Can we see how this is a problem&#63;</p><br>
+
+				<p>The active location has 100 units&#44; but there are 150 units picking&#46; We are short 50 units and what&#39;s worse we have <span class="italy">no more tasks</span>&#33; 
+				<strong><span class="italy">Short picks are inevitable&#33;</span></strong></p>
+
+			</div><!-- end of ponder class for exception section -->
+
+			<div class="subHead">
+
+				<p>This is one of the main reasons we run lean&ndash;time at each break throughout the day&#46; This practice fixes the broken tasks&#46; 
+				Like all lean-time run after the waves&#44; these tasks are towards the back of the Wave Replenishment Tasks report&#46;</p>
+
+			</div><!-- end of subHead for exceptions section -->
+
+
+			<a href="#contentList" class="return">To Contents &#8613;</a>
+
+
+		</div><!-- end of body class for exceptions section -->
+
+	</section><!-- end of exceptions section -->
+
+	<footer id="Footer">
+
+		<div class="footer">
+
+			<p>&copy;2017 Big 5 Sporting Goods</p>
+
+		</div>
+
+		
+
+	</footer><!-- end of footer section -->
+
+
+</div><!-- end of wrapper -->
+</body>
+
+</html>
